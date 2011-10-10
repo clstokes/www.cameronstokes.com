@@ -1,0 +1,6 @@
+--- 
+layout: post
+title: Happy 1234567890!
+categories: Tech
+---
+Any developer or system administrator worth their salt will know what I'm talking about.
