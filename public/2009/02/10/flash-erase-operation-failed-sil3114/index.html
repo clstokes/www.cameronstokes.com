@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>"Flash erase operation failed" with Syba SD-SATA-4P (Sil3114) - Cameron Stokes's Blog</title>
+  <meta name="author" content="Cameron Stokes">
+
+  
+  <meta name="description" content="BackgroundI&#8217;ve been needing to upgrade my home fileserver for a while and finally broke down and bought some parts.  Being afraid of losing m...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.cameronstokes.com/2009/02/10/flash-erase-operation-failed-sil3114/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Cameron Stokes's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Cameron Stokes's Blog</a></h1>
+  
+    <h2>[ 'technologist', 'beer lover', 'foodie', 'traveler' ]</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.cameronstokes.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/about/">About</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">"Flash Erase Operation Failed" With Syba SD-SATA-4P (Sil3114)</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2009-02-10T00:00:00-08:00" pubdate  data-updated="true" >Feb 10<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h3>Background</h3>
+
+<p>I&#8217;ve been needing to upgrade my home fileserver for a while and finally broke down and bought some parts.  Being afraid of losing my data, I decided I&#8217;d move to <a href="http://en.wikipedia.org/wiki/OpenSolaris">OpenSolaris</a> so I could take advantage of the extra features <a href="http://en.wikipedia.org/wiki/ZFS">ZFS</a> has to keep my bits safe.  One of the first issues I encountered was that the 2 <a href="http://www.promise.com/product/product_detail_eng.asp?product_id=139">Promise SATA300 TX4</a> cards I had in my computer weren&#8217;t supported in OpenSolaris.  After some googling I found that the <a href="http://www.syba.com/Product/Info/Id/34">Syba SD-SATA-4P</a> SATA controller, based on the <a href="http://www.siliconimage.com/products/product.aspx?pid=28">Sil3114 chipset</a> from <a href="http://en.wikipedia.org/wiki/Silicon_Image">Silicon Image</a>, available on <a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16815124020">Newegg</a> was supported as long as the non-RAID BIOS was installed on the card.</p>
+
+<h3>The Issue</h3>
+
+<p>After receiving it from Newegg, I fired up the <a href="http://www.sun.com/bigadmin/hcl/hcts/device_detect.jsp">Sun Device Detection Tool</a> to see if it was reported as supported.  It was not, but having read the reviews on Newegg I knew I needed to install the non-RAID BIOS on the card.  I downloaded the 5.4.0.3 version from the Silicon Imaging site (<a href="http://www.siliconimage.com/support/searchresults.aspx?pid=28&cat=15">download here</a>) and realized I needed either a DOS boot disk or a Windows machine from which I could update it.  Having neither, I pulled out one of the older computers from my closet, installed Windows XP, and proceeded to install the card&#8217;s drivers.  Once that was complete I tried to flash the non-RAID BIOS, but received a pretty nasty error message:</p>
+
+<pre>Flash erase operation failed.</pre>
+
+
+<p>Given how finicky BIOS updates can be, I was afraid I had bricked the card.  I tried the RAID bios and it flashed without an issue.  I decided to try the first rule in troubleshooting a computer issue, reboot.  After rebooting I was still having the issue, I tried a few more times, read a few more posts online, checked the Syba website which gave me nothing.</p>
+
+<h3>The Solution</h3>
+
+<p>About to give up hope I re-read the readme that came with the download and noticed this line:</p>
+
+<pre>Ensure that a SATA device is plugged into a 3114 SATA port.</pre>
+
+
+<p>I remember reading the line earlier but brushed it off, figuring that couldn&#8217;t really be required.  Having tried everything else, I shutdown, plugged in a SATA drive, started back up and was able to flash the BIOS without issue.  I ran the Sun Device Detection Tool again and the card was recognized and shown as being supported.  I&#8217;m still curious why there needs to be a drive connected in order to flash the card.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Cameron Stokes</span></span>
+
+      
+
+
+
+
+
+  
+
+
+
+<time datetime="2009-02-10T00:00:00-08:00" pubdate  data-updated="true" >Feb 10<span>th</span>, 2009</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/category/tech/'>Tech</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+</div>
+
+    
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("clstokes", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/clstokes">@clstokes</a></p>
+  
+</section>
+
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2011/09/21/new-pandora-bookmarklet/">New Pandora Bookmarklet</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/08/15/grails-and-204-no-content-responses/">Grails and 204 "No Content" responses</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/08/04/tasting-trailhead-isa/">Tasting: Trailhead ISA</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/07/20/compressed-content-amazon-s3-and-cloudfront/">Compressed Content, Amazon S3, and CloudFront</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/07/16/tasting-grand-teton-sheep-eater/">Tasting: Grand Teton Sheep Eater</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Post Categories</h1>
+  <ul>
+      <li><a href="/category/tech/">Tech</a></li>
+      <li><a href="/category/beer/">Beer</a></li>
+      <li><a href="/category/Other/">Other</a></li>
+  </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2011 - Cameron Stokes -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+    
+      var disqus_shortname = 'clstokes';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-646672-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

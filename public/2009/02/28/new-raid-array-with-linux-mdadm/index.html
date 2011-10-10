@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>New raid array with Linux and mdadm - Cameron Stokes's Blog</title>
+  <meta name="author" content="Cameron Stokes">
+
+  
+  <meta name="description" content="I ran out of free space on my file server a few months back and have been too cheap to upgrade until recently.  I first started with four 400 GB dr...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.cameronstokes.com/2009/02/28/new-raid-array-with-linux-mdadm/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Cameron Stokes's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Cameron Stokes's Blog</a></h1>
+  
+    <h2>[ 'technologist', 'beer lover', 'foodie', 'traveler' ]</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.cameronstokes.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/about/">About</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">New Raid Array With Linux and Mdadm</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2009-02-28T00:00:00-08:00" pubdate  data-updated="true" >Feb 28<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>I ran out of free space on my file server a few months back and have been too cheap to upgrade until recently.  I first started with four 400 <a href="http://en.wikipedia.org/wiki/Gigabyte">GB</a> drives a few years ago and setup a <a href="http://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_5">RAID 5</a> array using Linux and <a href="http://en.wikipedia.org/wiki/Mdadm">mdadm</a> giving me roughly 1.2 <a href="http://en.wikipedia.org/wiki/Terabyte">TB</a> of space.  I upgraded a disk at a time as needed until I had seven drives and about 2.6 TB of space:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Filesystem            Size  Used Avail Use% Mounted on
+</span><span class='line'>/dev/md0              2.6T  2.6T  2.8G 100% /mnt/sata-array</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Having filled this up I started looking for the best way to upgrade.  The <a href="http://en.wikipedia.org/wiki/Seagate_Technology">Seagate</a> 1.5 TB drives offered the best per GB pricing however with the recent <a href="http://hardware.slashdot.org/hardware/08/11/11/2125227.shtml">bad news</a> specific to these drives I decided to stear clear of Seagate.  The next best option I could find were the 1 TB <a href="http://en.wikipedia.org/wiki/Western_Digital">Western Digital</a> Green Power drives.  The Green Power drives have a lower overall rotational speed and will spin down as allowed to save power with the added benefit of generating less heat and also noise.</p>
+
+<p>After reading several threads (<a href="http://episteme.arstechnica.com/eve/forums/a/tpc/f/24609792/m/480007274931">one here</a>) regarding Bit Error Rates (BER) with drives this large and the potential for errors even with a RAID 5 array I decided to go for <a href="http://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_6">RAID 6</a> with my new array.  RAID 6 can survive 2 disk drive failuers and will theoretically protect me from the high BER these drives are susceptible to.</p>
+
+<p>In a <a href="http://cameronstokes.com/2009/02/10/flash-erase-operation-failed-sil3114/">previous post</a> I mentioned trying <a href="http://en.wikipedia.org/wiki/ZFS">ZFS</a>.  I scrapped that idea when I found you can&#8217;t expand a ZFS <a href="http://en.wikipedia.org/wiki/ZFS#Storage_pools">zpool</a> by adding single drives to the system.  You can add additional zpools to a zpool (not sure if my terminology is right there) but that means adding an equal amount of storage to your existing array when you want to upgrade.  This means if I have 4 drives in a zpool, I&#8217;d have to add another 4 drives to upgrade.  You can also replace drives in the zpool with larger drives to expand them, but you have to replace each drive.  Neither option is very cost effective for me.  I was a little disappointed not to be able to try something new but have been happy with Linux and mdadm so it was not a difficult decision to go back to them.</p>
+
+<p>I ordered 6 drives from Amazon and once they arrived I assembled them into a RAID 6 array.  mdadm has to sync the newly created array but the array is online and can be used normally.  A quick <a href="http://en.wikipedia.org/wiki/Ext3">ext3</a> format and I have 3.6 TB of space available.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Filesystem            Size  Used Avail Use% Mounted on
+</span><span class='line'>/dev/md0              3.6T  229G  3.2T   7% /opt/sata-array</span></code></pre></td></tr></table></div></figure>
+
+
+<p>After the format I started transferring my data which slows down the sync, but transferring all my data will take a few days anyway so the overall timeline doesn&#8217;t really matter for me.  Doing a <strong>cat /proc/mdstat</strong> shows me the status of the array:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Personalities : [linear] [multipath] [raid0] [raid1] [raid6] [raid5] [raid4] [raid10]
+</span><span class='line'>md0 : active raid6 sdf[5] sde[4] sdd[3] sdc[2] sdb[1] sda[0]
+</span><span class='line'>      3907049984 blocks level 6, 64k chunk, algorithm 2 [6/6] [UUUUUU]
+</span><span class='line'>      [======&gt;..............]  resync = 32.0% (312900864/976762496) finish=4727.0min speed=2340K/sec
+</span><span class='line'>unused devices: &lt;none&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Short of having to setup a second computer to transfer the data, the entire process is very easy.  I feel better knowing my data is reasonably safe with RAID 6 even though I don&#8217;t have a backup.  Backing up that much data is just too expensive to be worthwhile.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Cameron Stokes</span></span>
+
+      
+
+
+
+
+
+  
+
+
+
+<time datetime="2009-02-28T00:00:00-08:00" pubdate  data-updated="true" >Feb 28<span>th</span>, 2009</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/category/tech/'>Tech</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+</div>
+
+    
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("clstokes", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/clstokes">@clstokes</a></p>
+  
+</section>
+
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2011/09/21/new-pandora-bookmarklet/">New Pandora Bookmarklet</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/08/15/grails-and-204-no-content-responses/">Grails and 204 "No Content" responses</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/08/04/tasting-trailhead-isa/">Tasting: Trailhead ISA</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/07/20/compressed-content-amazon-s3-and-cloudfront/">Compressed Content, Amazon S3, and CloudFront</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/07/16/tasting-grand-teton-sheep-eater/">Tasting: Grand Teton Sheep Eater</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Post Categories</h1>
+  <ul>
+      <li><a href="/category/tech/">Tech</a></li>
+      <li><a href="/category/beer/">Beer</a></li>
+      <li><a href="/category/Other/">Other</a></li>
+  </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2011 - Cameron Stokes -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+    
+      var disqus_shortname = 'clstokes';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-646672-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

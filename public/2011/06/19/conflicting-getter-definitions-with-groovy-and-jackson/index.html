@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Conflicting getter definitions with Groovy and Jackson - Cameron Stokes's Blog</title>
+  <meta name="author" content="Cameron Stokes">
+
+  
+  <meta name="description" content="I&#8217;ve been piecing together Groovy and Jackson JSON Processor for a recent project (both making the project a breeze to get up and running) an...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.cameronstokes.com/2011/06/19/conflicting-getter-definitions-with-groovy-and-jackson/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Cameron Stokes's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Cameron Stokes's Blog</a></h1>
+  
+    <h2>[ 'technologist', 'beer lover', 'foodie', 'traveler' ]</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.cameronstokes.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/about/">About</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Conflicting Getter Definitions With Groovy and Jackson</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2011-06-19T00:00:00-07:00" pubdate  data-updated="true" >Jun 19<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>I&#8217;ve been piecing together <em><a href="http://groovy.codehaus.org/">Groovy</a></em> and <a href="http://jackson.codehaus.org/"><em>Jackson JSON Processor</em></a> for a recent project (both making the project a breeze to get up and running) and quickly ran into an exception that at first glance may be a bit confusing but the fix was quite simple. The exception was:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> java.lang.IllegalArgumentException: Conflicting getter definitions for property "error": pix.Response#isError(0 params) vs pix.Response#getError(0 params)
+</span><span class='line'>  at ... </span></code></pre></td></tr></table></div></figure>
+
+
+<p>The reason for the exception is that Groovy automatically generates <em>isProperty()</em> and <em>getProperty()</em> methods for <em>boolean</em> properties on beans. Groovy is a little too clever in this case and Jackson gives up when it sees both.</p>
+
+<p>Assuming a simple Groovy bean:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">GroovyBean</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kt">boolean</span> <span class="n">error</span> <span class="o">=</span> <span class="kc">false</span>
+</span><span class='line'>  <span class="n">String</span> <span class="n">name</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The Groovy compiler really turns this into:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">GroovyBean</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kt">boolean</span> <span class="n">error</span> <span class="o">=</span> <span class="kc">false</span>
+</span><span class='line'>  <span class="n">String</span> <span class="n">name</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">def</span> <span class="nf">getError</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">error</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">def</span> <span class="nf">isError</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">error</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="o">...</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The fix is to explicitly define a <em>getError()</em> method in our <em>GroovyBean</em> class. This way the Groovy compiler won&#8217;t automatically generate both getters. (Unfortunately, the Groovy compiler still generates <em>getError() </em>if you define <em>isError()</em> so we&#8217;re stuck with <em>getError().)</em> Our new GroovyBean would look like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">GroovyBean</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kt">boolean</span> <span class="n">error</span> <span class="o">=</span> <span class="kc">false</span>
+</span><span class='line'>  <span class="n">String</span> <span class="n">name</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">def</span> <span class="nf">getError</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">error</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="o">...</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><em></em> After this change our GroovyBean is serialized into this:</p>
+
+<pre>{"name":"","error":true}</pre>
+
+
+<p>I like simple fixes.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Cameron Stokes</span></span>
+
+      
+
+
+
+
+
+  
+
+
+
+<time datetime="2011-06-19T00:00:00-07:00" pubdate  data-updated="true" >Jun 19<span>th</span>, 2011</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/category/tech/'>Tech</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+</div>
+
+    
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("clstokes", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/clstokes">@clstokes</a></p>
+  
+</section>
+
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2011/09/21/new-pandora-bookmarklet/">New Pandora Bookmarklet</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/08/15/grails-and-204-no-content-responses/">Grails and 204 "No Content" responses</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/08/04/tasting-trailhead-isa/">Tasting: Trailhead ISA</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/07/20/compressed-content-amazon-s3-and-cloudfront/">Compressed Content, Amazon S3, and CloudFront</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/07/16/tasting-grand-teton-sheep-eater/">Tasting: Grand Teton Sheep Eater</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Post Categories</h1>
+  <ul>
+      <li><a href="/category/tech/">Tech</a></li>
+      <li><a href="/category/beer/">Beer</a></li>
+      <li><a href="/category/Other/">Other</a></li>
+  </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2011 - Cameron Stokes -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+    
+      var disqus_shortname = 'clstokes';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-646672-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

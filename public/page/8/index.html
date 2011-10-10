@@ -1,0 +1,638 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Cameron Stokes's Blog</title>
+  <meta name="author" content="Cameron Stokes">
+
+  
+  <meta name="description" content="I consider myself a very focused and productive person, but over the past couple of weeks I&#8217;ve realized that I am much more productive when w...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.cameronstokes.com/page/8/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Cameron Stokes's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Cameron Stokes's Blog</a></h1>
+  
+    <h2>[ 'technologist', 'beer lover', 'foodie', 'traveler' ]</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.cameronstokes.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/about/">About</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/12/30/getting-things-done-with-a-list/">Getting Things Done With a List</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2009-12-30T00:00:00-08:00" pubdate  data-updated="true" >Dec 30<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I consider myself a very focused and productive person, but over the past couple of weeks I&#8217;ve realized that I am much more productive when working from a task list.  The list keeps my mind from wondering to other tasks and I get a great satisfaction in checking tasks off  and reviewing the list at the end of the day to see what I have accomplished.  I have some ideas on how to improve my list (and digitize it); let&#8217;s see how much more productive I can get!</p>
+
+<p>This week&#8217;s task list:</p>
+
+<p><img class="size-full wp-image-921" title="to-do-list" src="http://cameronstokes.com/wp-content/uploads/2009/12/todo-list.jpg" alt="My latest to-do list" width="480" height="360" /></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/12/26/intercepting-controllers-in-spring-mvc/">Intercepting Controllers in Spring MVC</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2009-12-26T00:00:00-08:00" pubdate  data-updated="true" >Dec 26<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Working on <a href="/2009/10/12/new-project/">my latest project</a> the past couple days I was trying to figure out a way to enforce authentication for some requests but not others.  I first wrote a <a href="http://java.sun.com/products/servlet/Filters.html">Filter</a> but when I started mapping the filter to my specific URLs I realized how tedious this could become.  I then remembered that <a href="http://www.springsource.org/about">Spring</a> allowed for interceptors in its web framework and after a quick glance through their documentation I found <a href="http://static.springsource.org/spring/docs/2.5.x/reference/mvc.html#mvc-handlermapping-interceptor">the section I was looking for</a>.  Unfortunately this still wasn&#8217;t exactly what I needed as Spring applies your interceptors to all requests configured in your handler mapping.  Looking at the <a href="http://static.springsource.org/spring/docs/2.5.x/api/index.html">HandlerInterceptor API</a> I found I had access to the handler that was being processed and I just needed to decorate my handlers that needed authentication and adjust my interceptor to first check the handler.  I decided to create an empty Interface named <em>AuthenticatedController</em> which my controllers could implement to indicate they needed to be protected from unauthenticated access.  You could also do this using annotations, but here&#8217;s my code:</p>
+
+<p><em>AuthenticatedController.java</em></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">AuthenticatedController</span> <span class="o">{</span>
+</span><span class='line'>    <span class="c1">// This is empty on purpose.</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><em>SimpleController.java</em></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">import</span> <span class="nn">javax.servlet.http.HttpServletRequest</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">javax.servlet.http.HttpServletResponse</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kn">import</span> <span class="nn">org.springframework.web.servlet.ModelAndView</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">StateController</span> <span class="kd">implements</span> <span class="n">AuthenticatedController</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">ModelAndView</span> <span class="nf">handleRequest</span><span class="o">(</span> <span class="kd">final</span> <span class="n">HttpServletRequest</span> <span class="n">httpServletRequest</span><span class="o">,</span>
+</span><span class='line'>            <span class="kd">final</span> <span class="n">HttpServletResponse</span> <span class="n">httpServletResponse</span> <span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+</span><span class='line'>        <span class="o">...</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><em>AuthenticationInterceptor.java</em></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">import</span> <span class="nn">javax.servlet.http.HttpServletRequest</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">javax.servlet.http.HttpServletResponse</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">javax.servlet.http.HttpSession</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kn">import</span> <span class="nn">org.springframework.web.servlet.handler.HandlerInterceptorAdapter</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">AuthenticationInterceptor</span> <span class="kd">extends</span> <span class="n">HandlerInterceptorAdapter</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">preHandle</span><span class="o">(</span> <span class="n">HttpServletRequest</span> <span class="n">request</span><span class="o">,</span> <span class="n">HttpServletResponse</span> <span class="n">response</span><span class="o">,</span>
+</span><span class='line'>            <span class="n">Object</span> <span class="n">handler</span> <span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">if</span> <span class="o">(</span> <span class="o">!(</span> <span class="n">handler</span> <span class="k">instanceof</span> <span class="n">AuthenticatedController</span> <span class="o">)</span> <span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>            <span class="c1">// Authentication not needed, allow request to continue.</span>
+</span><span class='line'>            <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+</span><span class='line'>        <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="kt">boolean</span> <span class="n">isAuthenticated</span> <span class="o">=</span> <span class="n">checkAuthentication</span><span class="o">(...);</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">if</span> <span class="o">(</span> <span class="o">!</span><span class="n">isAuthenticated</span> <span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>            <span class="c1">// User is not authenticated, handle response as needed, and halt processing.</span>
+</span><span class='line'>            <span class="n">response</span><span class="o">.</span><span class="na">setStatus</span><span class="o">(</span> <span class="n">HttpServletResponse</span><span class="o">.</span><span class="na">SC_FORBIDDEN</span> <span class="o">);</span>
+</span><span class='line'>            <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+</span><span class='line'>        <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="c1">// User is authenticated, allow request to continue.</span>
+</span><span class='line'>        <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><em>spring-beans.xml</em></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+</span><span class='line'><span class="nt">&lt;beans</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.springframework.org/schema/beans&quot;</span>
+</span><span class='line'>  <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+</span><span class='line'>  <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://www.springframework.org/schema/beans</span>
+</span><span class='line'><span class="s">       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;bean</span> <span class="na">name=</span><span class="s">&quot;authenticationInterceptor&quot;</span> <span class="na">class=</span><span class="s">&quot;custom.AuthenticationInterceptor&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;bean</span> <span class="na">name=</span><span class="s">&quot;urlMapping&quot;</span>
+</span><span class='line'>    <span class="na">class=</span><span class="s">&quot;org.springframework.web.servlet.handler.SimpleUrlHandlerMapping&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;interceptors&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>         <span class="nt">&lt;list&gt;</span>
+</span><span class='line'>       <span class="nt">&lt;ref</span> <span class="na">bean=</span><span class="s">&quot;authenticationInterceptor&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/list&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/property&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;mappings&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;props&gt;</span>
+</span><span class='line'>            <span class="nt">&lt;prop</span> <span class="na">key=</span><span class="s">&quot;/controller1.json&quot;</span><span class="nt">&gt;</span>controller1<span class="nt">&lt;/prop&gt;</span>
+</span><span class='line'>            <span class="nt">&lt;prop</span> <span class="na">key=</span><span class="s">&quot;/controller2.json&quot;</span><span class="nt">&gt;</span>controller2<span class="nt">&lt;/prop&gt;</span>
+</span><span class='line'>            <span class="nt">&lt;prop</span> <span class="na">key=</span><span class="s">&quot;/controller3.json&quot;</span><span class="nt">&gt;</span>controller3<span class="nt">&lt;/prop&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;/props&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/property&gt;</span>
+</span><span class='line'><span class="nt">&lt;/bean&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;/beans&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/12/12/using-svnversion-from-ant/">Using Svnversion From Ant</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2009-12-12T00:00:00-08:00" pubdate  data-updated="true" >Dec 12<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>At work we use a combination of <em><a href="http://en.wikipedia.org/wiki/Subversion_%28software%29">Subversion (svn)</a></em>, <em><a href="http://en.wikipedia.org/wiki/Apache_Maven">Maven</a></em>, and <em><a href="http://en.wikipedia.org/wiki/Apache_Ant">Ant</a></em> to build and deploy our applications  and integrate the <em>svn</em> revision number into our deployment packages.  As an example, if we&#8217;re packaging our <em>callcenter</em> application our build scripts will create a <em>callcenter-7175.jar</em> package.  This makes it easy for us to upgrade and rollback between versions as needed.</p>
+
+<p>The   <em>svnversion</em> program makes it easy to get the revision number of your working copy by simply executing the program:</p>
+
+<pre>macbookpro:rel-091105 stokesc$ svnversion
+7175</pre>
+
+
+<p>To use this from <em>Ant</em> we can use the <a href="http://ant.apache.org/manual/CoreTasks/exec.html">exec</a> task.  The example below will execute <em>svnversion</em> and capture its output into the <em>Ant</em> property <em>repository.revision</em> which is used later on in our build script:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;</span>
+</span><span class='line'><span class="nt">&lt;project</span> <span class="na">name=</span><span class="s">&quot;Build Script&quot;</span> <span class="na">default=</span><span class="s">&quot;make&quot;</span> <span class="na">basedir=</span><span class="s">&quot;.&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nt">&lt;target</span> <span class="na">name=</span><span class="s">&quot;make&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="c">&lt;!-- Get current working directory. --&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;exec</span> <span class="na">executable=</span><span class="s">&quot;pwd&quot;</span> <span class="na">outputproperty=</span><span class="s">&quot;dir.root&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="c">&lt;!-- Get subversion revision number. --&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;exec</span> <span class="na">executable=</span><span class="s">&quot;svnversion&quot;</span> <span class="na">outputproperty=</span><span class="s">&quot;repository.revision&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="nt">&lt;echo</span> <span class="na">message=</span><span class="s">&quot;Repository revision is ${repository.revision}&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nt">&lt;/target&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;/project&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This worked well for us for a few years but when we needed to build from an older branch the revision number wasn&#8217;t representative of the last revision in the branch.  Looking at the options for <em>svnversion</em> I found passing <em>-c</em> will return the revision number of the last change rather than the current revision which is what we really wanted.</p>
+
+<pre>macbookpro:rel-091105 stokesc$ svnversion -c
+1:6985</pre>
+
+
+<p>You can see the difference in revision numbers from this command versus the one above, but this still isn&#8217;t perfect due to the starting revision number that&#8217;s been added.  A little change to our <em>Ant</em> script can strip this off for us.  Here we use the <a href="http://ant.apache.org/manual/CoreTypes/redirector.html">redirector</a> and <a href="http://ant.apache.org/manual/CoreTypes/filterchain.html">filterchain</a> types and a <a href="http://en.wikipedia.org/wiki/Regular_expression">regular expression</a> to modify the output.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;</span>
+</span><span class='line'><span class="nt">&lt;project</span> <span class="na">name=</span><span class="s">&quot;Build Script&quot;</span> <span class="na">default=</span><span class="s">&quot;make&quot;</span> <span class="na">basedir=</span><span class="s">&quot;.&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nt">&lt;target</span> <span class="na">name=</span><span class="s">&quot;make&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="c">&lt;!-- Get current working directory. --&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;exec</span> <span class="na">executable=</span><span class="s">&quot;pwd&quot;</span> <span class="na">outputproperty=</span><span class="s">&quot;dir.root&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="c">&lt;!-- Get subversion revision number. --&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;exec</span> <span class="na">executable=</span><span class="s">&quot;svnversion&quot;</span> <span class="na">outputproperty=</span><span class="s">&quot;repository.revision&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>            <span class="c">&lt;!-- Specify &#39;-c&#39; to get last changed rather than current revisions. --&gt;</span>
+</span><span class='line'>            <span class="nt">&lt;arg</span> <span class="na">value=</span><span class="s">&quot;-c&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>            <span class="c">&lt;!-- Use redirector/filterchain to parse output.</span>
+</span><span class='line'><span class="c">                 svnversion -c will return output in format [initial]:[current]</span>
+</span><span class='line'><span class="c">                 and we want to strip off [initial]: --&gt;</span>
+</span><span class='line'>            <span class="nt">&lt;redirector&gt;</span>
+</span><span class='line'>                <span class="nt">&lt;outputfilterchain&gt;</span>
+</span><span class='line'>                    <span class="nt">&lt;tokenfilter&gt;</span>
+</span><span class='line'>                        <span class="nt">&lt;replaceregex</span> <span class="na">pattern=</span><span class="s">&quot;[0-9]+\:&quot;</span> <span class="na">replace=</span><span class="s">&quot;&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>                    <span class="nt">&lt;/tokenfilter&gt;</span>
+</span><span class='line'>                <span class="nt">&lt;/outputfilterchain&gt;</span>
+</span><span class='line'>            <span class="nt">&lt;/redirector&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;/exec&gt;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="nt">&lt;echo</span> <span class="na">message=</span><span class="s">&quot;Repository revision is ${repository.revision}&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nt">&lt;/target&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;/project&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>We&#8217;re now able to go back and package older versions of our application with a true indication of their <em>svn</em> revision.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/12/08/a-great-beer-week/">A Great Beer Week</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2009-12-08T00:00:00-08:00" pubdate  data-updated="true" >Dec 8<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This past week has been a great beer week.  Last Tuesday we had dinner at the Westside location <a href="http://www.5seasonsbrewing.com/">5 Seasons Brewing Company</a> and enjoyed their beer sampler along with some great food.  Each of their beers was delicious, especially their IPA.  This was only the second time I&#8217;ve been to 5 Seasons; the first being at the Prado location where <span class="BodySubhead">Kevin McNerney brews, of <a href="http://en.wikipedia.org/wiki/Sweetwater_Brewing_Company">Sweetwater</a> fame.</span></p>
+
+<p><span class="BodySubhead">Last weekend we </span>made our way down to Tampa for the ACC Championship Game (go <a href="http://en.wikipedia.org/wiki/Georgia_Institute_of_Technology">Tech</a>!) and made sure to take advantage of the beers available in Florida and Tampa specifically that we can&#8217;t get in Georgia.  Friday night, we grabbed dinner at the <a href="http://www.tampabaybrewingcompany.com/">Tampa Bay Brewing Company</a> and had great beers and great food.  Again I got their beer sampler which included each of their year-round beers and a cask-conditioned Moosekiller Barleywine; all very delicious.  I highly recommend Tampa Bay Brewing Company; in addition to the beer and food, the service was excellent.  Before the game on Saturday we stopped by a Total Wine and stocked up on the infamous <a href="http://en.wikipedia.org/wiki/Dogfish_Head_Brewery">Dogfish Head</a> 120 Minute IPA as well as Dogfish Head&#8217;s Shelter Pale Ale, Raison d&#8217;Extra, Fort, and Theobroma, <a href="http://www.cigarcitybeer.com/">Cigar City Brewing&#8217;s</a> General Zhukov&#8217;s Imperial Stout and Improvisacion Ale, and <a href="http://www.lazymagnolia.com/">Lazy Magnolia&#8217;s</a> Southern Pecan and Indian Summer.  I&#8217;ve since tried a 120 Minute IPA but haven&#8217;t made it to the others yet.  I had to reorganize the beer fridge in order to fit everything.  Here&#8217;s the full score from Florida:</p>
+
+<p><img class="size-full wp-image-861" title="florida-beers" src="http://cameronstokes.com/wp-content/uploads/2009/12/florida-beers.jpg" alt="Score from Florida" width="480" height="360" /></p>
+
+<p>Back in Georgia, <a href="http://en.wikipedia.org/wiki/Terrapin_Beer_Company">Terrapin</a> has released their Hopsecutioner IPA.  I am a total hophead and this beer does not disappoint.  I&#8217;m actually quite proud of myself as this is the first beer I&#8217;ve successfully identified a hop in the beer by taste alone.  A couple weeks ago I had Rogue&#8217;s <a href="http://www.rogue.com/beers/yellow-snow-ipa.php">Yellow Snow IPA</a> and remarked how different the hop profile was from a typical IPA.  I can taste the same hop in the Hopsecutioner: Amarillo.  I&#8217;ve yet to make a homebrew using this hop, but this has moved up the list on things to try.  I love the flavor of this hop.</p>
+
+<p>If only more weeks could be like this&#8230;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/10/12/new-project/">New Project</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2009-10-12T00:00:00-07:00" pubdate  data-updated="true" >Oct 12<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&#8217;ve started several development/technology projects over the past few years, none of which have made it to a launch or release.  Many of them were to learn new a new framework, a couple were things I thought I could turn into a full-blown product but for whatever reason didn&#8217;t.</p>
+
+<p>In any case, I have a new project I&#8217;ve been working on for the the past 2 weeks that I plan to see all the way through.  I think there&#8217;s a real need for a product like this and can see it having a pretty decent adoption.  Without giving away too many details here&#8217;s a tease:</p>
+
+<p><img class="size-full wp-image-843 aligncenter" title="new-project" src="http://cameronstokes.com/wp-content/uploads/2009/10/new-project.png" alt="New Project" width="480" height="363" /></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <nav class="pagination">
+    <div>
+      
+        <a class="prev" href="/page/9/">&larr; Older</a>
+      
+      <a href="/blog/archives">Blog Archives</a>
+      
+      <a class="next" href="/page/7/">Newer &rarr;</a>
+      
+    </div>
+  </nav>
+</div>
+<aside class="sidebar">
+  
+    
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("clstokes", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/clstokes">@clstokes</a></p>
+  
+</section>
+
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2011/09/21/new-pandora-bookmarklet/">New Pandora Bookmarklet</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/08/15/grails-and-204-no-content-responses/">Grails and 204 &#8220;No Content&#8221; responses</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/08/04/tasting-trailhead-isa/">Tasting: Trailhead ISA</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/07/20/compressed-content-amazon-s3-and-cloudfront/">Compressed Content, Amazon S3, and CloudFront</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/07/16/tasting-grand-teton-sheep-eater/">Tasting: Grand Teton Sheep Eater</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Post Categories</h1>
+  <ul>
+      <li><a href="/category/tech/">Tech</a></li>
+      <li><a href="/category/beer/">Beer</a></li>
+      <li><a href="/category/Other/">Other</a></li>
+  </ul>
+</section>
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2011 - Cameron Stokes -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+    
+      var disqus_shortname = 'clstokes';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-646672-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

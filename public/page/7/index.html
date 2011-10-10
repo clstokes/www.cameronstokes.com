@@ -1,0 +1,448 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Cameron Stokes's Blog</title>
+  <meta name="author" content="Cameron Stokes">
+
+  
+  <meta name="description" content="Every time I listen to Pandora I open the site in a new window and scroll and resize the window to fit the player just right and hide the noise (ad...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.cameronstokes.com/page/7/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Cameron Stokes's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Cameron Stokes's Blog</a></h1>
+  
+    <h2>[ 'technologist', 'beer lover', 'foodie', 'traveler' ]</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.cameronstokes.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/about/">About</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2010/05/30/pandora-bookmarklet/">Pandora Bookmarklet</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2010-05-30T00:00:00-07:00" pubdate  data-updated="true" >May 30<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Every time I listen to <a href="http://www.pandora.com/">Pandora</a> I open the site in a new window and scroll and resize the window to fit the player just right and hide the noise (ads) on the page.  I finally sat down and put together a <a href="http://en.wikipedia.org/wiki/Bookmarklet">bookmarklet</a> to do this for me.  It&#8217;s not perfect, but is good enough.  Right-click the link below and click Bookmark This Link (in Firefox) and you can use the same script to load Pandora and only see what you really care about, the music.</p>
+
+<p><a href="javascript:function%20pandora(){window.open('http://pandora.com/#radio','_blank','width=725,height=340,scrollbars=1,location=0,menubar=0,titlebar=0,toolbar=0');}pandora();">Bookmark This Link.</a></p>
+
+<p>Here&#8217;s the code (prettified):</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">javascript</span><span class="o">:</span> <span class="kd">function</span> <span class="nx">pandora</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nb">window</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span> <span class="s1">&#39;http://pandora.com/#radio&#39;</span><span class="p">,</span>
+</span><span class='line'>                 <span class="s1">&#39;_blank&#39;</span><span class="p">,</span>
+</span><span class='line'>                 <span class="s1">&#39;width=725,height=340,&#39;</span> <span class="o">+</span>
+</span><span class='line'>                 <span class="s1">&#39;scrollbars=1,location=0,menubar=0,titlebar=0,toolbar=0&#39;</span>
+</span><span class='line'>    <span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nx">pandora</span><span class="p">();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Enjoy.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2010/05/11/installing-euca2ools-on-mac-os-x/">Installing Euca2ools on Mac OS X</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2010-05-11T00:00:00-07:00" pubdate  data-updated="true" >May 11<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Having been bit by the cloud bug, I recently looked into the cloud computing software <a href="http://en.wikipedia.org/wiki/Eucalyptus_%28computing%29">Eucalyptus</a>.  Using the <a href="http://www.ubuntu.com/cloud/private">Ubuntu Enterprise Cloud</a> distribution I setup a controller and a couple nodes and then went to install <a href="http://open.eucalyptus.com/wiki/Euca2oolsGuide_v1.1">Euca2ools</a> on my Macbook.  Following the instructions <a href="http://open.eucalyptus.com/wiki/Euca2oolsSourceInstall">here</a>, I soon ran into an issue.  Here is the error I received:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>stokesc-mbp:euca2ools-1.2 stokesc$ sudo make
+</span><span class='line'>...
+</span><span class='line'>Processing dependencies for euca2ools==1.0
+</span><span class='line'>Finished processing dependencies for euca2ools==1.0
+</span><span class='line'>install: root: Invalid argument
+</span><span class='line'>make: *** [install] Error 67
+</span><span class='line'>stokesc-mbp:euca2ools-1.2 stokesc$ </span></code></pre></td></tr></table></div></figure>
+
+
+<p>A quick internet search didn&#8217;t reveal too much but I soon found my way into the <em>MakeFile</em> and noticed the group for the install command seemed off.  Knowing Mac OS X&#8217;s ancestry is <a href="http://en.wikipedia.org/wiki/Berkeley_Software_Distribution">BSD</a> and from my past experience with OpenBSD, I knew the <em>root</em> group did not exist in the BSD operating system and was in fact named <em>wheel</em>.  I changed all references to the group <em>root</em> (the -g option), but left the owner references alone (the -o option) and Euca2ools was soon installed.  Here is the snippet from my new MakeFile:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>...
+</span><span class='line'>  @install -g wheel -o root -m 755 -d $(PREFIX)/bin
+</span><span class='line'>  @install -g wheel -o root -m 755  bin/* $(PREFIX)/bin/
+</span><span class='line'>  @install -g wheel -o root -m 755 -d $(PREFIX)/man/man1
+</span><span class='line'>  @if [ -d $(MANDIR) ]; then install -g wheel -o root -m 644  $(MANDIR)/* $(PREFIX)/man/man1; fi
+</span><span class='line'>  @if [ -d $(BASH_COMPLETION) ]; then install -g wheel -o root -m 644  $(UTILDIR)/* $(BASH_COMPLETION); fi
+</span><span class='line'>...
+</span><span class='line'> </span></code></pre></td></tr></table></div></figure>
+
+
+<p>I opened bug <a href="https://bugs.launchpad.net/eucalyptus/+bug/558420">558420</a> with the Eucalyptus project to address this.  As of this post, this issue affects version 1.2 of the Euca2ools download and likely previous versions.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2010/04/14/im-on-google-street-view/">I&#8217;m on Google Street View</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2010-04-14T00:00:00-07:00" pubdate  data-updated="true" >Apr 14<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Almost eighteen months ago, I found the Google Street View guy near work and followed him for a bit trying to stay in view.  For several weeks following I checked the location online nearly every day and eventually gave up.  Thanks to a commenter on my original post I checked again and we are there.  They removed the frames of us hanging out the window talking to the driver, but there I am in the driver seat.</p>
+
+<p><img src="/wp-content/uploads/2010/04/google-street-view.jpg" width="480" height="371" title="google-street-view" ></p>
+
+<p>Click <a href="http://local.google.com/?ie=UTF8&amp;ll=33.931361,-84.337342&amp;spn=0,0.021973&amp;z=16&amp;layer=c&amp;cbll=33.931274,-84.337338&amp;panoid=vlMcaMbCrpgMsIM3Psm1SA&amp;cbp=12,263.04,,0,21.7">here</a> to see us on the map.</p>
+
+<p>My original post is <a href="../2008/08/16/im-going-to-be-on-google-street-view-i-hope/">here</a>.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2010/03/06/beer-from-afar/">Beer From Afar</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2010-03-06T00:00:00-08:00" pubdate  data-updated="true" >Mar 6<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&#8217;m a beer lover.  I don&#8217;t hide it, I don&#8217;t deny it, I think and talk way too much about beer.  The other night I had a dream that our Scotch ale (currently in the fermenter) turned out to be the best beer ever.  One of the many  upsides to this obsession is that friends and family know how much I love beer and help feed my obsession.  Case in point&#8230;just this week I received two special deliveries!</p>
+
+<p>The first delivery was from a friend who just returned from  California.</p>
+
+<p><img class="size-full wp-image-961" title="beer-from-california" src="http://cameronstokes.com/wp-content/uploads/2010/03/beer-from-california.jpg" alt="California Delivery" width="480" height="321" /></p>
+
+<p>From left to right: Brew Free or Die IPA from <a href="http://www.21st-amendment.com/">21st Amendment Brewery</a>, Hitachino Nest White Ale and Hitachino Nest Red Rice Ale from <a href="http://www.kodawari.cc/">Kiuchi Brewery</a>, and Pliny the Elder from <a href="http://www.russianriverbrewing.com/">Russian River Brewing Company</a>.</p>
+
+<p>The next delivery came by way of my Grandmother from North Carolina.  There&#8217;s a great little beer store in her town and she&#8217;s recently started going and asking the owner about beers that I might like.</p>
+
+<p><img class="size-full wp-image-962" title="beer-from-north-carolina" src="http://cameronstokes.com/wp-content/uploads/2010/03/beer-from-north-carolina.jpg" alt="Beer from North Carolina" width="480" height="283" /></p>
+
+<p>From left to right again: Fourteen Ale from <a href="http://www.weyerbacher.com/">Wyerbacher</a>, Celebrator Doppelbock from <a href="http://www.ayinger.de/">Ayinger Bier</a>, Dragon&#8217;s Milk from <a href="http://www.newhollandbrew.com/">New Holland Brewing Company</a>, Urthel Samaranth from <a href="http://www.urthel.com/">De Leyerth Brouwerijen</a>, and Samichlaus from <a href="http://www.schloss-eggenberg.at/de/">Castle Brewery Eggenberg</a>.</p>
+
+<p>Some of these I  could likely find in Georgia but don&#8217;t think I&#8217;ve seen any of them before.  I&#8217;m fairly certain I could find the Hitachino Nest beers locally but I  know for a fact 21st Amendment and Russian River do not distribute to  Georgia, though <a href="http://www.atlantabeermaster.com/?p=976">I hear</a> 21st  Amendment will be starting soon.  I can&#8217;t wait to try each of these beers but am most excited about Dragon&#8217;s Milk, Pliny the Elder, and Fourteen Ale.</p>
+
+<p>In other beer news, I&#8217;ve posted photos of the <a href="http://www.premiereventslive.com/winterbeercarnival/">Winter Beer Carnival</a> Rhonda and I attended last weekend; it was a blast!  Photos are <a href="http://cameronstokes.com/gallery/winter-beer-carnival-february-2010/">here</a>.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2010/02/05/announcing-kui/">Announcing Kui!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2010-02-05T00:00:00-08:00" pubdate  data-updated="true" >Feb 5<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I am excited to announce the initial release of kui!  kui is a modern, browser-based administration tool for Java applications supporting the <span class="mw-redirect">JMX</span> specification.  While tools already exist to monitor Java applications using JMX, kui takes a different approach to cure your JMX woes!</p>
+
+<p>Key features of kui are:</p>
+
+<ul>
+<li><strong>Browser-based</strong>: Once installed, all you need is a browser to access your MBeans.</li>
+<li><strong>Easy-to-use interface</strong>: kui provides a familiar and consistent interface for viewing and administering your MBeans.</li>
+<li><strong>Standards based</strong>: kui works with a wide variety of application servers and browsers.</li>
+<li><strong>Pure Java and JavaScript</strong>: kui is written using Java and JavaScript for easy modifications.</li>
+<li><strong>Open source</strong>: kui is distributed under the New BSD License.</li>
+</ul>
+
+
+<p>Head on over to the <a href="http://www.marker55.com/kui/">kui website</a> for more information, screenshots, and available downloads.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <nav class="pagination">
+    <div>
+      
+        <a class="prev" href="/page/8/">&larr; Older</a>
+      
+      <a href="/blog/archives">Blog Archives</a>
+      
+      <a class="next" href="/page/6/">Newer &rarr;</a>
+      
+    </div>
+  </nav>
+</div>
+<aside class="sidebar">
+  
+    
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("clstokes", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/clstokes">@clstokes</a></p>
+  
+</section>
+
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2011/09/21/new-pandora-bookmarklet/">New Pandora Bookmarklet</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/08/15/grails-and-204-no-content-responses/">Grails and 204 &#8220;No Content&#8221; responses</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/08/04/tasting-trailhead-isa/">Tasting: Trailhead ISA</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/07/20/compressed-content-amazon-s3-and-cloudfront/">Compressed Content, Amazon S3, and CloudFront</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/07/16/tasting-grand-teton-sheep-eater/">Tasting: Grand Teton Sheep Eater</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Post Categories</h1>
+  <ul>
+      <li><a href="/category/tech/">Tech</a></li>
+      <li><a href="/category/beer/">Beer</a></li>
+      <li><a href="/category/Other/">Other</a></li>
+  </ul>
+</section>
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2011 - Cameron Stokes -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+    
+      var disqus_shortname = 'clstokes';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-646672-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

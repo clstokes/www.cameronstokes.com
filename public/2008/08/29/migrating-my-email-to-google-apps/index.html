@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Migrating my email to Google Apps - Cameron Stokes's Blog</title>
+  <meta name="author" content="Cameron Stokes">
+
+  
+  <meta name="description" content="I&#8217;ve been running my own email server for several years now and the biggest issues have certainly been dealing with spam.  For the longest ti...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.cameronstokes.com/2008/08/29/migrating-my-email-to-google-apps/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Cameron Stokes's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Cameron Stokes's Blog</a></h1>
+  
+    <h2>[ 'technologist', 'beer lover', 'foodie', 'traveler' ]</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.cameronstokes.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/about/">About</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Migrating My Email to Google Apps</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2008-08-29T00:00:00-07:00" pubdate  data-updated="true" >Aug 29<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>I&#8217;ve been running my own email server for several years now and the biggest issues have certainly been dealing with spam.  For the longest time I just put up with it and filtered manually.  Then about 2 years ago I put in place an anti-spam gateway using <a href="http://openbsd.org/">OpenBSD</a> and the excellent guide over at <a href="http://flakshack.com/anti-spam/wiki/index.php">flakshak.com</a>.  This worked great.  I was able to configure the anti-spam settings using <a href="http://spamassassin.apache.org/">SpamAssassin</a> and tweak to my heart&#8217;s delight.</p>
+
+<p>The biggest issue with this was managing the box(es) running the anti-spam software.  We (I was running a hosting company at the time with two other people.) ended up filling up the various disk partitions with either massive email log files or SpamAssassin data as we added more and more users to the server.  If we didn&#8217;t keep an eye on it, the disk would fill up, and the server would then die in strange ways.  (Fortunately, we were running redundant OpenBSD servers with <a href="http://openbsd.org/faq/pf/index.html">pf</a> and <a href="http://openbsd.org/faq/pf/carp.html">carp</a> so we often didn&#8217;t notice the server had died until we tried to login to it later.)  Anyway, after shutting down the anti-spam servers and moving my personal server I had to figure out another way to deal with the spam.</p>
+
+<p>I ended up using the same email server software as before and setup some forwarding rules following <a href="http://blog.mboffin.com/blogpost.aspx?id=1636">Using Gmail as a Spam Filter</a>.  This worked great as well but sometimes caused a delay in getting emails and given my setup I had to reconcile email in both gmail and my mail server.  That is, marking items as read in my email server didn&#8217;t mark them as read in gmail as well, so I had to do it in both places&#8230;not a big issue but mildly annoying.</p>
+
+<p>Fast forward a year or so and I&#8217;ve now moved my email hosting to <a href="http://www.google.com/a/help/intl/en/index.html">Google Apps</a> entirely.  The process was a piece of cake though not as fast as I would have liked.  After signing up, you have to prove that you own the domain you&#8217;re wanting them to host, either by uploading an html document that they specify or creating a sub-domain on your DNS server that they specify.  This process seems to take about 30 minutes to an hour for them to verify though they claim it can take 24-48 hours.  After this you have to enable E-mail for your domain which again takes about 30 minuts to an hour as they enable their email servers to accept email for your domain.  Once this is done you just need to change your DNS settings so that your MX records point to Google&#8217;s servers.  The process takes a couple hours, but it&#8217;s mostly waiting.</p>
+
+<p>I left the email server running on my personal server for the next several days so that I could still get email while the DNS changes propagated out to everyone.  About 7 days later I was still getting email to it, but when I checked who was sending it was mostly spam and the number of emails had dropped considerably.  I decided to go ahead and shut it down and not worry about any other email coming in.</p>
+
+<p>All in all, the setup process was painless.  I no longer have to worry about running my own email server or dealing with anti-spam software.  It&#8217;s no wonder why Google provides this, they now gets tons of information about me as they offer ads based on the content of my email.  I may be paranoid, I don&#8217;t like Google knowing so much about me (certainly a topic for a future post), but they&#8217;ve made their services so enticing that it&#8217;s difficult to justify running my own server or paying someone else to do it.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Cameron Stokes</span></span>
+
+      
+
+
+
+
+
+  
+
+
+
+<time datetime="2008-08-29T00:00:00-07:00" pubdate  data-updated="true" >Aug 29<span>th</span>, 2008</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/category/tech/'>Tech</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+</div>
+
+    
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("clstokes", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/clstokes">@clstokes</a></p>
+  
+</section>
+
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2011/09/21/new-pandora-bookmarklet/">New Pandora Bookmarklet</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/08/15/grails-and-204-no-content-responses/">Grails and 204 "No Content" responses</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/08/04/tasting-trailhead-isa/">Tasting: Trailhead ISA</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/07/20/compressed-content-amazon-s3-and-cloudfront/">Compressed Content, Amazon S3, and CloudFront</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/07/16/tasting-grand-teton-sheep-eater/">Tasting: Grand Teton Sheep Eater</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Post Categories</h1>
+  <ul>
+      <li><a href="/category/tech/">Tech</a></li>
+      <li><a href="/category/beer/">Beer</a></li>
+      <li><a href="/category/Other/">Other</a></li>
+  </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2011 - Cameron Stokes -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+    
+      var disqus_shortname = 'clstokes';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-646672-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
