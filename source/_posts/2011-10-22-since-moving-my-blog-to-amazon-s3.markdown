@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Since Moving My Blog to S3..."
+title: "Since Moving My Blog to Amazon S3..."
 date: 2011-10-22 10:52
 comments: true
-categories: 
+categories: Tech
 ---
 Can you tell when I migrated this blog from my own server to Amazon S3?
 
@@ -12,3 +12,5 @@ Can you tell when I migrated this blog from my own server to Amazon S3?
 
 **Performance**
 {% img /wp-content/uploads/2011/10/cameronstokes.com-performance.png 636 296 Performance %}
+
+100% availability and 25% faster response times.
