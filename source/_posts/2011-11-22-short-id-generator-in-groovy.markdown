@@ -24,7 +24,7 @@ class IDUtils {
 
   def generateID() {
     def id = ""
-    for ( i in 0..NUMBER_OF_CHARS ) {
+    for ( i in 1..NUMBER_OF_CHARS ) {
       id += CHARS[random.nextInt(CHARS.size())]
     }
     return id
