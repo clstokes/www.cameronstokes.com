@@ -63,9 +63,9 @@ Back to Rio's Rompin Rye...
 {% img /wp-content/uploads/2011/10/epic-brewing-rios-rompin-rye-glass.jpg 480 321 Rio's Rompin Rye %}
 
 ## Conclusion
-I'm disappointed with this beer. Rye is one of my favorite flavors in a beer and this one isn't _rompin'_ and has very little rye. In fact, it's really light on aroma and flavor on the whole. This is a below-average beer in my book. Not a fan.
+I'm disappointed with this beer. Rye is one of my favorite flavors in a beer and this one isn't _rompin'_ and has very little rye. In fact, it's really light on aroma and flavor on the whole. This is a below-average beer in my book. Not a fan. I received this along with several other Epic Brewing beers from a friend in SLC. I'm hoping the others don't disappoint.
 
-I received this along with several other Epic Brewing beers from a friend in SLC. I'm hoping the others don't disapoint.
+I _am_ a fan of Epic's numbering and brewing log of their Exponential Series available on their website. For each batch in the Exponential Series, Epic notes differences in recipe and outcomes. Each bottle is numbered by batch. I wish more breweries did this.
 
 **Food pairings**: Anything... not much going on here.
 
