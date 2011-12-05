@@ -3,7 +3,7 @@ layout: post
 title: "Tasting: Rio's Rompin Rye"
 date: 2011-10-27 19:58
 comments: true
-categories: beer
+categories: Beer
 ---
 *__Rio's Rompin Rye Beer__* is from Epic Brewing Company in Salt Lake City, Utah. A part of their Exponential Series, Rio's Rompin Rye comes in a 22 oz. bomber bottle with an appealing, high-quality label. 
 
