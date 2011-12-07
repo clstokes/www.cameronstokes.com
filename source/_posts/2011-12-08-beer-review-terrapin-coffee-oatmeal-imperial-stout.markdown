@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Tasting: Terrapin Coffee Oatmeal Imperial Stout"
+title: "Beer Review: Terrapin Coffee Oatmeal Imperial Stout"
 date: 2011-12-05 14:25
 comments: true
 categories: Beer
