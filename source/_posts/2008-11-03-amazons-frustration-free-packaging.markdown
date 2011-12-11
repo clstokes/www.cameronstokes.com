@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Amazon's Frustration-Free Packaging
+comments: true
 categories: Other
 ---
 Today, Amazon announced <a href="http://www.amazon.com/gp/help/customer/display.html?nodeId=200285450">Frustration-Free Packaging</a>, a way of packaging and shipping products in easy-to-open, easy-to-recycle packaging, eliminating unnecessary hard plastic cases and wire ties.

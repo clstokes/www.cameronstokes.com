@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Netflix video quality survey
+comments: true
 categories: Tech
 ---
 Netflix <a href="http://cameronstokes.com/2008/11/19/microsofts-new-xbox-experience/">recently</a> opened up their <a href="http://en.wikipedia.org/wiki/Netflix#Watch_Instantly">Watch Instantly</a> service to external platforms such as the <a href="http://en.wikipedia.org/wiki/Xbox_360">XBOX 360</a>, <a href="http://en.wikipedia.org/wiki/TiVo">TiVo</a>, <a href="http://en.wikipedia.org/wiki/Roku">Roku</a>, and others increasing their potential audience of the service to users who don't want to sit at their computer to watch a movie or TV show.

@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Google Chrome OS Review
+comments: true
 categories: Tech
 ---
 Ever since <a href="http://googleblog.blogspot.com/2009/07/introducing-google-chrome-os.html">Google Chrome OS</a> was announced in July of 2009 I've been looking forward to seeing what hits the streets. Fortunately, a <a href="http://en.wikipedia.org/wiki/Google_Chrome_OS#Cr-48_prototype_hardware">Cr-48 Chrome OS laptop</a> landed on my desk today and I've spent the evening trying it out.

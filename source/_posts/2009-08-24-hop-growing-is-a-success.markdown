@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Hop Growing is a Success
+comments: true
 categories: Beer
 ---
 Since planting the hops <a href="http://cameronstokes.com/2009/03/10/bogart-georgia-hop-farm/">back in March</a> we've made numerous trips to Bogart to water, trim, and just overall tend to the hops.  A few of the rhizomes didn't make it but of the 23 vines, we ended up with about 18 that took off and have been growing like crazy ever since.

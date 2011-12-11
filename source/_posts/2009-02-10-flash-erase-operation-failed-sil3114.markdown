@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: "\"Flash erase operation failed\" with Syba SD-SATA-4P (Sil3114)"
+comments: true
 categories: Tech
 ---
 ### Background

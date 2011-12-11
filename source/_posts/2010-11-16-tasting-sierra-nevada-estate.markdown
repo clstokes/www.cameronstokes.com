@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: "Tasting: Sierra Nevada Estate Homegrown Wet Hop Ale"
+comments: true
 categories: Beer
 ---
 <strong><em>Estate Homegrown Wet Hop Ale</em></strong> is a limited edition release from Sierra Nevada Brewing Co., and as the name implies,  is made with the brewery's own homegrown hops and barley. Formerly called Chico Estate the beer was renamed this year as it became the  brewery's first certified organic beer. Sierra Nevada is no stranger to environmentally friendly and sustainable practices having one of the country's largest privately held solar arrays, CO2 and heat recovery processes, and a rail spur allowing supplies to be brought in by rail rather than truck. As with the brewery's other limited releases, especially <em>Life &amp; Limb</em> and the <em>30th Anniversary</em> series, <em>Estate</em> has very intricate and appealing artwork on the label.

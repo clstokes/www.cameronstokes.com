@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: New Project
+comments: true
 categories: Tech
 ---
 I've started several development/technology projects over the past few years, none of which have made it to a launch or release.  Many of them were to learn new a new framework, a couple were things I thought I could turn into a full-blown product but for whatever reason didn't.

@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Global Website Performance with Amazon EC2
+comments: true
 categories: Tech
 ---
 {% img right /wp-content/uploads/2011/01/ec2-china-response-times-crop.png 141 100 ec2-china-response-times-crop %}

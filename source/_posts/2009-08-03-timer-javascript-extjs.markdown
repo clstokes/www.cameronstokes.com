@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Timer in JavaScript and ExtJS
+comments: true
 categories: Tech
 ---
 _Updated after migrating my blog off of Wordpress._

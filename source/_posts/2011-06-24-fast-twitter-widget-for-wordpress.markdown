@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Fast Twitter Widget for Wordpress
+comments: true
 categories: Tech
 ---
 <em><strong>tl;dr version...</strong> for loading your Twitter stream on your Wordpress blog, <a href="http://wordpress.org/extend/plugins/reliable-twitter/">Reliable Twitter</a></em><em> is a fast and </em><em>reliable way to do it without impacting performance and usability of your blog.</em>

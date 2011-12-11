@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Installing Euca2ools on Mac OS X
+comments: true
 categories: Tech
 ---
 Having been bit by the cloud bug, I recently looked into the cloud computing software <a href="http://en.wikipedia.org/wiki/Eucalyptus_%28computing%29">Eucalyptus</a>.  Using the <a href="http://www.ubuntu.com/cloud/private">Ubuntu Enterprise Cloud</a> distribution I setup a controller and a couple nodes and then went to install <a href="http://open.eucalyptus.com/wiki/Euca2oolsGuide_v1.1">Euca2ools</a> on my Macbook.  Following the instructions <a href="http://open.eucalyptus.com/wiki/Euca2oolsSourceInstall">here</a>, I soon ran into an issue.  Here is the error I received:

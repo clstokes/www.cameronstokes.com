@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: New raid array with Linux and mdadm
+comments: true
 categories: Tech
 ---
 I ran out of free space on my file server a few months back and have been too cheap to upgrade until recently.  I first started with four 400 <a href="http://en.wikipedia.org/wiki/Gigabyte">GB</a> drives a few years ago and setup a <a href="http://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_5">RAID 5</a> array using Linux and <a href="http://en.wikipedia.org/wiki/Mdadm">mdadm</a> giving me roughly 1.2 <a href="http://en.wikipedia.org/wiki/Terabyte">TB</a> of space.  I upgraded a disk at a time as needed until I had seven drives and about 2.6 TB of space:

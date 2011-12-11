@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Using svnversion from Ant
+comments: true
 categories: Tech
 ---
 At work we use a combination of <em><a href="http://en.wikipedia.org/wiki/Subversion_%28software%29">Subversion (svn)</a></em>, <em><a href="http://en.wikipedia.org/wiki/Apache_Maven">Maven</a></em>, and <em><a href="http://en.wikipedia.org/wiki/Apache_Ant">Ant</a></em> to build and deploy our applications  and integrate the <em>svn</em> revision number into our deployment packages.  As an example, if we're packaging our <em>callcenter</em> application our build scripts will create a <em>callcenter-7175.jar</em> package.  This makes it easy for us to upgrade and rollback between versions as needed.

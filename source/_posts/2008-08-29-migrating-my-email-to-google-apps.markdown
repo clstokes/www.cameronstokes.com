@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Migrating my email to Google Apps
+comments: true
 categories: Tech
 ---
 I've been running my own email server for several years now and the biggest issues have certainly been dealing with spam.  For the longest time I just put up with it and filtered manually.  Then about 2 years ago I put in place an anti-spam gateway using <a href="http://openbsd.org/">OpenBSD</a> and the excellent guide over at <a href="http://flakshack.com/anti-spam/wiki/index.php">flakshak.com</a>.  This worked great.  I was able to configure the anti-spam settings using <a href="http://spamassassin.apache.org/">SpamAssassin</a> and tweak to my heart's delight.

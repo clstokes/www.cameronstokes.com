@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Bogart Hop Farm
+comments: true
 categories: Beer
 ---
 Having taken up homebrewing lately, I decided to take it a step further and grow my own <a href="http://en.wikipedia.org/wiki/Hops">hops</a>.   After doing some research regarding growing hops in <a href="http://en.wikipedia.org/wiki/Georgia_(U.S._state)">Georgia</a>, of which there is very little information, I picked up the book <a href="http://www.amazon.com/Homebrewers-Garden-Easily-Prepare-Brewing/dp/1580170102/ref=pd_bbs_sr_1?ie=UTF8&amp;s=books&amp;qid=1236737105&amp;sr=8-1">The Homebrewer's Garden</a>.  The section on hops is really short but has some good information on how to plant, care for, and harvest your own hops.

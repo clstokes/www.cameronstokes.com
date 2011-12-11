@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: The evolution of my job...
+comments: true
 categories: Other
 ---
 In email archive size:

@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Amazon.com Customer Service
+comments: true
 categories: Other
 ---
 I've always been a big fan of <a href="http://www.amazon.com/">Amazon.com</a>; they have a huge selection of products, a great website, and great customer service, not to mention the <a href="http://www.amazon.com/kindle">Kindle</a> is awesome.  My fondness for the company may have reached <a href="http://en.wikipedia.org/wiki/Fanboy">fanboy</a> level based on my latest interaction with Amazon's customer service.

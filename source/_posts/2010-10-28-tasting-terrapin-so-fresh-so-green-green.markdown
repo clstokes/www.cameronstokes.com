@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: "Tasting: Terrapin - So Fresh & So Green, Green"
+comments: true
 categories: Beer
 ---
 <strong><em>So Fresh &amp; So Green, Green</em></strong>, Terrapin Beer Co.'s first wet hop beer, was released this year in between the craft beer industry's Oktoberfest, pumpkin, and winter beers. Not coincidentally, the release came shortly after Terrapin's Hop Harvest Festival at the brewery in Athens. The beer's name is a clever homage to <a href="http://en.wikipedia.org/wiki/So_Fresh,_So_Clean"><em>So Fresh, So Clean</em></a>, a song from Atlanta's own hip-hop duo, <a href="http://en.wikipedia.org/wiki/Outkast">Outkast</a>.

@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: "Tasting: Dogfish Head My Antonia"
+comments: true
 categories: Beer
 ---
 <strong><em>My Antonia</em></strong> was born from a collaboration with Dogfish Head's founder Sam Calgione and Leonardo DiVencenzo of the Italian brewery Birra del Borgo. <em>My Antonia</em> is an imperial pilsner brewed using Dogfish Head's now famous continuous hopping process where hops are introduced throughout the boil rather than at set intervals. The first batch was brewed in Italy with a limited import to The States. In 2010, Dogfish Head brewed their inaugural batch at the Dogfish Head brewery in Delaware. My tasting is from the U.S. version.

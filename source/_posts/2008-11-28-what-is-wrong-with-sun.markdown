@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: What is wrong with Sun?
+comments: true
 categories: Tech
 ---
 I've had a geek crush on <a href="http://en.wikipedia.org/wiki/Sun_Microsystems">Sun Microsystems</a> for several years now.  Sometimes I find myself just browsing the <a href="http://www.sun.com/servers/">Servers</a> section of their website configuring different servers and imagining what I would do with <a href="http://www.sun.com/servers/coolthreads/t5440/">ridiculous mounts of CPU power</a> or <a href="http://www.sun.com/servers/x64/x4540/">storage</a>.  They make many cool products and technologies that continue to fascinate me:

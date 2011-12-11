@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Terrapin 30 Strong
+comments: true
 categories: Beer
 ---
 <a href="http://www.terrapinbeer.com/">Terrapin Beer Company</a> recently brewed a special beer for <a href="http://www.tacomac.com/">Taco Mac</a> for their 30th anniversary.  It's named <a href="http://www.terrapinbeer.com/beers/20-The-Thirty-Strong"><em>30 Strong</em></a>.  The name needs no explanation once you see the ingredient list and alcohol percentage.  Terrapin had the beer on tap at their 7th anniversary party last month, but unfortunately I didn't know about it when I was there so didn't get to have any.  When I heard Taco Mac was going to have it yesterday I made sure to be there.  I even called ahead to ask when the keg would be tapped.

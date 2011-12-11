@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Compressed Content, Amazon S3, and CloudFront
+comments: true
 categories: Tech
 ---
 I recently published a static website to <a href="http://aws.amazon.com/s3/">Amazon Simple Storage Service (Amazon S3)</a> and started looking for ways to improve performance. There weren't any inherent performance problems using S3 by itself but I wanted to squeeze out every bit of performance I could. I first looked at typical website performance techniques such as <a href="http://developer.yahoo.com/performance/rules.html#minify">minifying files</a>, <a href="http://developer.yahoo.com/performance/rules.html#css_top">putting stylesheets at the top</a>, and <a href="http://developer.yahoo.com/performance/rules.html#js_bottom">scripts at the bottom</a>, but wanted to keep going. My next steps were to <a href="http://developer.yahoo.com/performance/rules.html#gzip">GZIP components</a> and <a href="http://developer.yahoo.com/performance/rules.html#cdn">use a content delivery network</a>. Fortunately Amazon makes both of these easy with S3 and <a href="http://aws.amazon.com/cloudfront/">Amazon CloudFront</a>.

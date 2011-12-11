@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Mixing it up...a one gallon homebrew
+comments: true
 categories: Beer
 ---
 Since taking up homebrewing I've brewed 6 beers:

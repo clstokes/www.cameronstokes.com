@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Pandora finally comes to the BlackBerry
+comments: true
 categories: Tech
 ---
 <a href="http://en.wikipedia.org/wiki/Pandora_(music_service)">Pandora</a> has finally released a <a href="http://en.wikipedia.org/wiki/BlackBerry">BlackBerry</a> version of their Internet radio player.  While not officially supported on <a href="http://en.wikipedia.org/wiki/T-Mobile">T-Mobile</a> (according to Pandora's website) it installed and works great on my T-Mobile <a href="http://en.wikipedia.org/wiki/BlackBerry_Pearl">BlackBerry 8120</a>.  Just go to <a href="http://www.pandora.com/">www.pandora.com</a> from your phone and click the download link.

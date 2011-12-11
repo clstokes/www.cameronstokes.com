@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: "Tasting: Lost Abbey Red Barn Ale"
+comments: true
 categories: Beer
 ---
 <strong><em>Red Barn Ale</em></strong> is a Saison/Farmhouse spiced with Ginger, Orange Peel, Black Pepper and Grains of Paradise from Port Brewing/Lost Abbey based in San Marcos, California. Port Brewing/Lost Abbey has been around since the mid-90s and made a name for themselves making West-coast style beers under the Port Brewing name and Belgian-inspired and premium beers under Lost Abbey. Even though they've been around for over 15 years, they're a new entrant to the craft beer market in Georgia making available beers under both names.

@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Replacement UPS batteries and RefurbUPS.com
+comments: true
 categories: Other
 ---
 <h3><a href="http://cameronstokes.com/2011/05/14/update-replacement-ups-batteries-and-refurbups-com/"><strong>Update: I no longer recommend RefurbUPS.com.</strong></a></h3>

@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: File recovery with PhotoRec
+comments: true
 categories: Tech
 ---
 Last Fall, Rhonda and I spent a week in Panama (the country, not the city in Florida). We had an awesome time...saw the canal, the five-hundred year old ruins of Panama Viejo, shopped in Casco Viejo, got lost driving in Ciudad de Panamá more times than I'll openly admit, had many great meals, and spent a couple days at the end of the trip relaxing at Playa Bonita. All in all it was a fantastic trip.

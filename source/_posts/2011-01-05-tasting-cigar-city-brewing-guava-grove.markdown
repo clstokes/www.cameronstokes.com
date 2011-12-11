@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: "Tasting: Cigar City Brewing Guava Grove"
+comments: true
 categories: Beer
 ---
 <em><strong>Guava Grove</strong></em> is a Belgian-style Saison from Cigar City Brewing (CCB) in Tampa, Florida. Interestingly, CCB got somewhat of a start in Atlanta at the <a href="http://www.classiccitybrew.com/acat09.html">2009 Atlanta Cask Ale Tasting</a> when they took first place with a homebrewed version of their Hunaphu Imperial Stout. Since then, CCB has made quite a name for themselves churning out many surprising and innovative beers.

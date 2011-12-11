@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Announcing kui!
+comments: true
 categories: Tech
 ---
 I am excited to announce the initial release of kui!  kui is a modern, browser-based administration tool for Java applications supporting the <span class="mw-redirect">JMX</span> specification.  While tools already exist to monitor Java applications using JMX, kui takes a different approach to cure your JMX woes!

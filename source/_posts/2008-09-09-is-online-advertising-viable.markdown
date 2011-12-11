@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Is online advertising viable?
+comments: true
 categories: Tech
 ---
 Is online advertising really working when one of the highest trafficked sites on the internet has advertising that's no better than your typical spam email?

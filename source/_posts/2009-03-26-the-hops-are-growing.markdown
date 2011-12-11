@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: The hops are growing
+comments: true
 categories: Beer
 ---
 We ventured up to Bogart this past weekend to check in on the hop farm.  My expectations were low after talking to my cousin who had stopped by the farm the previous week and not seen any seen anything growing.  My mood quickly improved when we arrived Saturday morning and found 4 plants that were peeking out of the ground, 2 Cascades and 2 Willamettes.  The Chinooks haven gotten off to a slower start.

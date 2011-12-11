@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: "\"Java heap space\" error from SAP Memory Analyzer"
+comments: true
 categories: Tech
 ---
 I ran into a fairly ironic error message when using the <a href="http://www.eclipse.org/projects/project_summary.php?projectid=technology.mat">SAP Memory Analyzer</a> to do some memory analysis of one of our applications at work.  The reason given for the error was "Java heap space".

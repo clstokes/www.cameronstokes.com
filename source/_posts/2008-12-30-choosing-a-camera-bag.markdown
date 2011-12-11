@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Choosing a camera bag
+comments: true
 categories: Other
 ---
 Ever since I got my DSLR earlier this year, a <a href="http://en.wikipedia.org/wiki/Pentax_K10D">Pentax K10D</a>, I've been needing a bag for it.  I went without one for a while, wrapping the camera in shirts or towels when taking it places, but that was obviously cumbersome and I was worried the camera would get damaged at some point.  After buying a <a href="http://www.joby.com/products/gorillapod/slrzoom/">Gorillapod</a> and wanting to get a new lens, specifically the <a href="http://www.pentaximaging.com/camera-lenses/smc_PENTAX_FA_50mm_F1.4/">smc PENTAX FA 50mm F1.4 prime</a>, I decided it was time to get a bag to hold everything.

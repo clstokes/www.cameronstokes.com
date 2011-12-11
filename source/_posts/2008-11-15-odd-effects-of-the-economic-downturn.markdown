@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Odd effects of the economic downturn.
+comments: true
 categories: Other
 ---
 I was getting my '04 Tundra's <a href="http://en.wikipedia.org/wiki/Automobile_emissions_control">emissions tested</a> this morning and asked the operator, Anthony, a couple questions regarding his business.

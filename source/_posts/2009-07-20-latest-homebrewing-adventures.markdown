@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Latest Homebrewing Adventures
+comments: true
 categories: Beer
 ---
 Brewing slowed in recent months but we kicked it back into gear a few weeks ago and now have 2 brews fermenting.  Our first foray back into brewing was a 1 gallon all-Simcoe IPA.  This was our 6th brew and the first using Simcoe hops.

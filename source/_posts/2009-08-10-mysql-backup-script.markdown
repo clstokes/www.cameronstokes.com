@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: MySQL Backup Script
+comments: true
 categories: Tech
 ---
 I've posted a <a href="http://en.wikipedia.org/wiki/Mysql">MySQL</a> backup script to the <a href="http://cameronstokes.com/lab/">lab</a> for anyone that is interested.  The script will backup all MySQL databases and allows you to configure the filename and path for backups and how long to keep older backups in number of days.  I have mine set to run via <a href="http://en.wikipedia.org/wiki/Cron">cron</a> every night at midnight and to retain 31 days of files so that I can revert to any day within the past month should anything happen.

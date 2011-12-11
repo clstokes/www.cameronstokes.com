@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Segmenting Traffic to Clusters in Resin
+comments: true
 categories: Tech
 ---
 For a multitude of reasons I won't get into here, I recently ran into an issue where I needed to segment traffic to a website by search engine traffic and real customer traffic. Using <a href="http://caucho.com/">Resin</a> as the load balancer and application server I found a very simple way to do this.

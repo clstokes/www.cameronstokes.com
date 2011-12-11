@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: "Tasting: Trailhead ISA"
+comments: true
 categories: Beer
 ---
 <em><strong>Trailhead ISA</strong></em> from Two Beers Brewing Co. is dubbed an India Style Session Ale but classified an IPA. At 4.8% ABV it doesn’t fit into the strictest standards of a Session Ale but is close nonetheless. It is probably the lowest ABV IPA I’ve had, yet still supplies enough hop flavor and bitterness to be an American IPA rather than an English IPA.

@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: 2009 New Year's Resolutions
+comments: true
 categories: Other
 ---
 Having taken a <a href="http://cameronstokes.com/2009/01/04/2008-in-review/">look back at 2008</a>, it's time to look forward to 2009.  Here are my <a href="http://en.wikipedia.org/wiki/New_Year's_resolution">New Year's resolutions</a>:

@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: "Batch resizing images with 'convert'"
+comments: true
 categories: Tech
 ---
 I've hosted a <a href="http://cameronstokes.com/gallery/">photo gallery</a> in some form or fashion on my site for about as long as I've had my own domain.  I first used <a href="http://gallery.menalto.com/">Gallery</a> and switched to <a href="http://www.zenphoto.org/">zenphoto</a> sometime last year for reasons I can't remember now.  Having close to 7,000 photos as of this post I was using up a lot of disk space on my host and was close to running out of available space.  7,000 photos isn't an excessive amount but when each full-size photo is roughly 2 MB, it adds up.  I decided the best way to free up space was to resize all of the photos down to the default view size of zenphoto and not allow the full-size versions to be viewed online.  A quick test showed this would reduce the average photo down to about 100 KB, a significant reduction.

@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: New Pandora Bookmarklet
+comments: true
 categories: Tech
 ---
 <a href="http://blog.pandora.com/pandora/archives/2011/09/new-pandora-for.html">New Pandora</a> has launched, so it's time for a #NewPandora bookmarklet. Here you go...

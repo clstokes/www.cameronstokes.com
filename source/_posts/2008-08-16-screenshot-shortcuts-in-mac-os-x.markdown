@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Screenshot shortcuts in Mac OS X
+comments: true
 categories: Tech
 ---
 I constantly have to look these up so am putting these here as a reference for myself.

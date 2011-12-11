@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Google Latitude saves the day
+comments: true
 categories: Tech
 ---
 A few weeks ago on <a href="http://en.wikipedia.org/wiki/Fathers_day">Father's Day</a>, we took Rhonda's dad out for brunch at <a href="http://www.fadoirishpub.com/atlanta/">Fado's Irish Pub</a> in Buckhead.  We had a great meal and after getting back home Rhonda realized she didn't have her phone.  We called her phone hoping we would hear it somewhere around the house, called her parents hoping they somehow had it, called her sister hoping the same, and eventually called the restaurant to ask them to look for it; nobody had it.  When trying to think where else it could be Rhonda screamed "Google Latitude!"

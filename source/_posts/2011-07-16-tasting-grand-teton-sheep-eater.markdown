@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: "Tasting: Grand Teton Sheep Eater"
+comments: true
 categories: Beer
 ---
 <em><strong>Sheep Eater Scotch Ale</strong></em> from Grand Teton Brewing Co. is a scotch ale from the brewery's Cellar Reserve series. Per the brewery website, it is brewed " to showcase the role of malt in the flavor of beer" and is brewed in   adherence to the German Beer Purity Law <em>Reinheitsgebot</em>. Having never heard of the brewery, I was excited to try the beer.

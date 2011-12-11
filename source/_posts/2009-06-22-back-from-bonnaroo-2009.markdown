@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Back from Bonnaroo 2009
+comments: true
 categories: Other
 ---
 I've been home from Bonnaroo for over a week now and finally getting around to recap'ing the trip.  The short version is, it was awesome, for the long version, continue reading.

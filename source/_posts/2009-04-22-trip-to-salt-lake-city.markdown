@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Trip to Salt Lake City
+comments: true
 categories: Other
 ---
 I'm wrapping up my trip to Salt Lake City and about to check out of the <a href="http://www.ichotelsgroup.com/h/d/hi/1/en/hotel/slcff">Holiday Inn Salt Lake City - Airport West</a>, a great hotel currently going through the <a href="http://relaunch.holidayinn.com/">Holiday Inn Relaunch</a> initiative.  My boss and I flew out here last Friday to visit one of InterContinental Hotels Group's call centers to discuss some of the applications we're developing for the agents.

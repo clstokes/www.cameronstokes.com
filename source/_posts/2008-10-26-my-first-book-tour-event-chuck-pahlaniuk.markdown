@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: My first book tour event - Chuck Palahniuk
+comments: true
 categories: Other
 ---
 I attended my first book tour event a few months ago for the release of my favorite author, <a href="http://en.wikipedia.org/wiki/Chuck_Palahniuk">Chuck Palahniuk's,</a> new book <a href="http://en.wikipedia.org/wiki/Snuff_(novel)"><em>Snuff</em></a>.  The event was held at <a href="http://en.wikipedia.org/wiki/Georgia_Perimeter_College">Georgia Perimeter College</a> with a packed house of roughly 2,000 people (rough guess based on me counting seats in the auditorium).

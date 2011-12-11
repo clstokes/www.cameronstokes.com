@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: New Belgium comes to Georgia
+comments: true
 categories: Beer
 ---
 I can't remember when I first had or heard of <a href="http://www.newbelgium.com/beer/fat-tire">Fat Tire</a>, all I know is its been a rare delicacy in my years as a beer drinker.  Not so anymore, <a href="http://en.wikipedia.org/wiki/New_Belgium_Brewing_Company">New Beligum Brewing Company</a> has finally come to Georgia.

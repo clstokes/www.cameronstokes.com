@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: The past 3 months
+comments: true
 categories: Other
 ---
 In the past 3 months I have...

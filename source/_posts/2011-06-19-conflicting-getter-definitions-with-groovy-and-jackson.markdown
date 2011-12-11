@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Conflicting getter definitions with Groovy and Jackson
+comments: true
 categories: Tech
 ---
 I've been piecing together <em><a href="http://groovy.codehaus.org/">Groovy</a></em> and <a href="http://jackson.codehaus.org/"><em>Jackson JSON Processor</em></a> for a recent project (both making the project a breeze to get up and running) and quickly ran into an exception that at first glance may be a bit confusing but the fix was quite simple. The exception was:

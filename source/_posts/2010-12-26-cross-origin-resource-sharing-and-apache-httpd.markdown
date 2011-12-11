@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Cross-Origin Resource Sharing and Apache httpd
+comments: true
 categories: Tech
 ---
 After <a href="http://twitter.com/#!/clstokes/status/15980064558555136">asking Amazon</a> to support the <a href="http://www.w3.org/TR/cors/">W3C Cross-Origin Resource Sharing specification</a> for the Route 53 APIs I decided to look into what it would take to implement the necessary headers in the Apache web server.

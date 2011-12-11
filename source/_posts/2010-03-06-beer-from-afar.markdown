@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Beer from afar
+comments: true
 categories: Beer
 ---
 I'm a beer lover.  I don't hide it, I don't deny it, I think and talk way too much about beer.  The other night I had a dream that our Scotch ale (currently in the fermenter) turned out to be the best beer ever.  One of the many  upsides to this obsession is that friends and family know how much I love beer and help feed my obsession.  Case in point...just this week I received two special deliveries!

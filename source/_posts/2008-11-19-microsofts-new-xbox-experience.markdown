@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Microsoft's New Xbox Experience
+comments: true
 categories: Tech
 ---
 Microsoft released their latest <a href="http://en.wikipedia.org/wiki/Xbox_Live">Xbox Live</a> update today, cleverly named the <em>New Xbox Experience (NXE)</em>.  While I haven't had a chance to take a look at all the new features I can speak to the upgrade process.

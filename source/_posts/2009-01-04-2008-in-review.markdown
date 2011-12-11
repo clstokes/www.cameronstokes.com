@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: 2008 in review
+comments: true
 categories: Other
 ---
 Now that 2008 is over, its time for a look back...

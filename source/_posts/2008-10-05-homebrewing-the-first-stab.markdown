@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Homebrewing...The First Stab.
+comments: true
 categories: Beer
 ---
 A friend and I decided to take our hand at homebrewing beer.  After doing a bit research we found a local wine making and beer brewing supply shop, <a href="http://winecraftatl.com/">Wine Craft of Atlanta</a>, and decided to venture over and check it out.  The shop owner, Rick Adams (and his wife Peggy whom we haven't met yet), was extremely helpful and put up with our countless questions on how homebrewing works, what to buy, what not to buy, etc., and we left with a beer starter equipment kit and an English Pale Ale ingredient kit.  I'm usually one to buy everything online to save some money, but not knowing exactly what to buy Rick's advice was priceless and his prices were roughly the same if not cheaper than the stores online, especially when not having to pay for shipping.

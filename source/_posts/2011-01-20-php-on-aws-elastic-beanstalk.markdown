@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: PHP on AWS Elastic Beanstalk
+comments: true
 categories: Tech
 ---
 The latest service offering from Amazon Web Services is <a href="http://aws.amazon.com/elasticbeanstalk/">AWS Elastic Beanstalk</a>, allowing companies to deploy applications to Amazon's cloud and let Amazon handle deployment and scaling of infrastructure automatically.

@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: What's in a name?
+comments: true
 categories: Beer
 ---
 I've tried some delicious new beers recently and my list of favorite breweries has grown, specifically <a href="http://en.wikipedia.org/wiki/Stone_Brewing_Company">Stone Brewing Co.</a>, <a href="http://en.wikipedia.org/wiki/Duck-Rabbit_Craft_Brewery">Duck Rabbit Craft Brewery</a>, and <a href="http://en.wikipedia.org/wiki/New_Belgium_Brewing_Company">New Belgium</a>.  A <a href="http://www.dogfish.com/community/blogfish/members/sam/vacation.htm">recent post on Blogfish</a>, the <a href="http://www.dogfish.com/">Dogfish Head</a> blog, answered the question of where Dogfish Head conceived their name and since I've always been curious about some of the other breweries and their names, I decided to do some research.  Here's what I came up with:

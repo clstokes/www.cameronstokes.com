@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Fun with a Kill A Watt, making coffee
+comments: true
 categories: Other
 ---
 I bought a <a href="http://en.wikipedia.org/wiki/Kill_A_Watt">Kill A Watt</a> awhile back, though technically not a Kill A Watt but a <a href="http://www.seasonicusa.com/power_angel.htm">Seasonic Power Angel</a>, but since I bought it I haven't done much with.  I've mainly used it for quick measurements of my computer or monitor, nothing "scientific."  This past week I decided to figure out how much energy was used in my daily coffee-making ritual.

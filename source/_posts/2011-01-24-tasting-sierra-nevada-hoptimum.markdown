@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: "Tasting: Sierra Nevada Hoptimum"
+comments: true
 categories: Beer
 ---
 <strong><em>Hoptimum</em></strong> is a "whole-cone imperial IPA" from Sierra Nevada Brewing Co. From what I can tell this is their first full-release American Double/Imperial IPA. Making it extra special, <em>Hoptimum</em> is brewed with a "New Proprietary Variety" hop. As with all of Sierra Nevada's brews, they use whole cone hops rather than pellets.

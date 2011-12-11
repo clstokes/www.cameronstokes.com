@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: A great beer week
+comments: true
 categories: Beer
 ---
 This past week has been a great beer week.  Last Tuesday we had dinner at the Westside location <a href="http://www.5seasonsbrewing.com/">5 Seasons Brewing Company</a> and enjoyed their beer sampler along with some great food.  Each of their beers was delicious, especially their IPA.  This was only the second time I've been to 5 Seasons; the first being at the Prado location where <span class="BodySubhead">Kevin McNerney brews, of <a href="http://en.wikipedia.org/wiki/Sweetwater_Brewing_Company">Sweetwater</a> fame.</span>

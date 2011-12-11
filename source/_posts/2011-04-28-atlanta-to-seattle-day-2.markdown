@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Atlanta to Seattle - Day 2
+comments: true
 categories: Other
 ---
 <em>My fiancé Rhonda and I have picked up and moved to Seattle so that she can pursue a job at Boeing working on their 787 Dreamliner. We opted to make the cross-country drive rather than fly. This series of posts will be a recap of our drive. Here's our adventure...</em>

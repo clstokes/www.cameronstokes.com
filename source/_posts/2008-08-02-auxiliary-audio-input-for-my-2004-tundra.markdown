@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: "Auxiliary input adapter for my 2004 Tundra "
+comments: true
 categories: Other
 ---
 I've been using a <a href="http://en.wikipedia.org/wiki/Cassette_tape_adaptor">cassette tape adapter</a> in my truck for the past few years to hook up my MP3 player, initially an iPod but now my new <a href="http://en.wikipedia.org/wiki/BlackBerry_Pearl">BlackBerry 8120</a>.  I've always wanted to install an auxiliary input adapter, and today I've finally done it.

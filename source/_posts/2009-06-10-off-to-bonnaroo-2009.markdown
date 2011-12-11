@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Off to Bonnaroo 2009!
+comments: true
 categories: Other
 ---
 In less than 24 hours I will be in <a href="http://en.wikipedia.org/wiki/Manchester,_Tennessee">Manchester, TN</a> attending the 2009 <a href="http://en.wikipedia.org/wiki/Bonnaroo_Music_Festival">Bonnaroo Music Festival</a>.

@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: I'm on Google Street View
+comments: true
 categories: Other
 ---
 Almost eighteen months ago, I found the Google Street View guy near work and followed him for a bit trying to stay in view.  For several weeks following I checked the location online nearly every day and eventually gave up.  Thanks to a commenter on my original post I checked again and we are there.  They removed the frames of us hanging out the window talking to the driver, but there I am in the driver seat.

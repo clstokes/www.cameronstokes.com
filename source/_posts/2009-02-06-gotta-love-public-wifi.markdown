@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Gotta love public wifi
+comments: true
 categories: Tech
 ---
 Our internet connection at home has been flaking out for the past few days and finally became intolerable today, with over 40% <a href="http://en.wikipedia.org/wiki/Packet_loss">packet loss</a>.  We called <a href="http://en.wikipedia.org/wiki/Comcast">Comcast</a> and have a technician scheduled to come out next week.  Usually we'd get by just fine but Rhonda needed some files from work so she could catch up on a few things over the weeken dso we ventured out to the local <a href="http://www.tacomac.com/">Taco Mac</a> to take advantage of their free wifi.

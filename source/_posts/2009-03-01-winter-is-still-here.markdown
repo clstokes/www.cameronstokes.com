@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Winter is still here
+comments: true
 categories: Other
 ---
 Winter must not have liked my <em><a href="http://cameronstokes.com/2009/02/16/spring-is-on-the-way/">Spring is on the way</a></em> post as today it decided to snow.  I guess I underestimated the ability of a <a href="http://en.wikipedia.org/wiki/Punxsutawney_Phil">pea-brained rodent</a> to predict the weather.

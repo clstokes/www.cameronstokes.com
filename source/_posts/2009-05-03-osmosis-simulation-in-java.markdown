@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: Osmosis simulation in Java
+comments: true
 categories: Tech
 ---
 Back in 2005, I took an <em>Applications Development</em> class at <a href="http://www.spsu.edu/">Southern Polytechnic State University (SPSU)</a> while working towards my Bachelor's of Science in Information Technology (BSIT).  At the time the class was taught with <a href="http://en.wikipedia.org/wiki/Java_(programming_language)">Java</a> (they've since switched to <a href="http://en.wikipedia.org/wiki/C_Sharp_(programming_language)">C#</a> unfortunately) and having worked in Java at <a href="http://en.wikipedia.org/wiki/Intercontinental_Hotels_Group">InterContinental Hotels Group (IHG)</a> for a few years already I convinced the professor to let me skip the classes, show up for the exams, and work on the class project at my leisure.  The class project was to develop a computer simulation of <a href="http://en.wikipedia.org/wiki/Osmosis">osmosis</a>.  This is what I put together:
