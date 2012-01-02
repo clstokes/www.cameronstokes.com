@@ -1,0 +1,25 @@
+---
+layout: post
+title: "2011: Year in Review"
+date: 2012-01-01 11:35
+comments: true
+categories: Other
+---
+My highlights of 2011:
+
+1. **In February** I spent two weeks in Shanghai, China kicking off a project for InterContinental Hotels Group (IHG). The project was to create a regionalized website for the China market and is the first production cloud deployment for IHG, running on Amazon Web Services.
+1. **Also in February** my fiance learned of a job opportunity for her at Boeing in Seattle, WA. I worked it out with my awesome boss at IHG that I could stay on remotely and Rhonda and I decided to make the leap.
+1. **In March** I spent a few days in Aguascalientes, Mexico to evaluate a new software partner for IHG. We were incredibly impressed with the meetings. My plane out of AGU was so small I couldn't sit up straight and I saw Willem Dafoe in Mexico City while catching my connecting flight.
+1. **In April** I traveled to New Delhi and Mumbai, India to meet with two other potential software partners for IHG. The meetings were disappointing. While in India, we traveled to Pune to visit a long-time, existing partner. We had a fantastic dinner and it was great to finally meet many of the people that I had worked with for years but had never had the opportunity to shake hands with.
+1. **After India** we made a stopover in Europe for some leisure. In 5 days we drove from Munich through Austria to Venice to Milan to Zurich and back to Munich. The BMW museum in Munich, dinner in Milan, and dinner at [Weihenstephan brewery](http://en.wikipedia.org/wiki/Weihenstephan_Abbey) outside of Munich were the high points of the trip. Venice was the low point. All in all, we drove over 1,000 miles.
+1. **After Europe** we left Atlanta for Seattle, driving cross country with stopovers in St. Louis, Nebraska, Fort Collins, Yellowstone, and Twin Falls. Our drive is chronicled starting [here](/2011/04/24/atlanta-to-seattle-day-1/). The drive was over 3,000 miles.
+1. **In June** I flew back to Atlanta and went to the [Bonnaroo music festival](http://en.wikipedia.org/wiki/Bonnaroo). It was a great time catching up with everyone from back home.
+1. **In July** we sold our home back in Atlanta after having it on the market for just over 3 months. We sold it for $100 more than we had bought it for in 2003. We lost a bit after commission, but given the state of the housing market we did quite well.
+1. **In August** we saw friends in Portland and visited [Deschutes](http://www.deschutesbrewery.com/) and [Cascade Brewing Barrel House](http://cascadebrewingbarrelhouse.com/).
+1. **In September** some friends came out to Seattle for the [Bumbershoot music festival](http://en.wikipedia.org/wiki/Bumbershoot). It was a fun and exhausting weekend.
+1. **In October** I sold my 8 year old, 140,000 mile Toyota Tundra and bought a 2012 Volkwswagen Golf TDI. I love the diesel engine and the features of the Golf are top notch.
+1. **In November** we traveled to Atlanta for Thanksgiving with family and I turned 29 years old.
+1. **In December** we traveled back to Atlanta for Christmas with family and then drove to San Francisco for New Year's Eve with family there. The drive was over 1,500 miles.
+1. **Between April and December** I traveled between Seattle and Atlanta 7 times.
+
+In summary, I flew over 75,000 miles and drove over 5,000 not counting every day driving. I visited 3 continents, 10 countries, and 23 cities. The biggest event was obviously the move from Atlanta to Seattle. It's been a great experience so far.
