@@ -17,7 +17,7 @@ class IDUtils {
           ('j'..'k') +
           ('m'..'z') +
           ('A'..'H') +
-          ('H'..'H') +
+          ('J'..'K') +
           ('M'..'Z')
 
   def random = new Random()
