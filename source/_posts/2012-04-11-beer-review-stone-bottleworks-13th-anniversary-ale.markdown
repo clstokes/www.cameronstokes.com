@@ -7,7 +7,7 @@ categories: Beer
 ---
 {% img right /wp-content/uploads/2012/04/stone-bottleworks-13th-anniversary-ale-logo.jpg 300 134 Stone Bottleworks 13th Anniversary Ale %}
 
-Bottleworks is a "specialty beer store" that has a large following in the local craft beer scene in Seattle. It's a small, dark place and at first glance, a bit unwelcoming but you soon get past it when you browse their selection. They get all the latest and greatest beers but also have some vintage beers as well. While browsing you can get a pint at the bar in the back or fill up a growler. All in all, it's a great destination for beer enthusiasts and one I always recommend.
+[Bottleworks](http://bottleworksbeerstore.blogspot.com/) is a "specialty beer store" in Seattle with a large following in the local craft beer scene. It's a small, dark place and at first glance, a bit unwelcoming but you soon get past it when you browse their selection. They get all the latest and greatest beers but also have some vintage beers in the back. While browsing you can get a pint at the bar in the back or fill up a growler. All in all, it's a great destination for beer enthusiasts and one I always recommend.
 
 This year is Bottleworks' 13th anniversary and like previous years they had an anniversary ale brewed in their honor. Recent years beers have been brewed by the likes of _New Belgium_ (10th anniversary), _Big Sky Brewing_ (11th anniversary), and _The Bruery_ (12th anniversary). 
 
