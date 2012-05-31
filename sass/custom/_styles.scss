@@ -39,10 +39,11 @@ body {
         border: none;
     }
     > footer {
-      background: $footer-bg;
-      border: none;
+      background: none;
+      border-top: 1px solid #53565a;
       margin: 0 auto;
       border-radius: 0;
+      text-shadow: none;
     }
 }
 
@@ -91,6 +92,10 @@ h1.entry-title {
   font-weight: normal;
 }
 
-body #content > article, body #content > div > article, body #content > div > section, {
+body #content > article, body #content > div > article, body #content > div > section {
   padding: 0;
+}
+
+body > footer {
+  padding: 5px 0 5px 0;
 }
