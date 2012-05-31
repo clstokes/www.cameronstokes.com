@@ -1,2 +1,96 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
+
+// Fonts
+.heading {
+  font-family: 'Georgia', serif;
+}
+.sans { font-family: "PT Sans", "Helvetica Neue", Arial, sans-serif; }
+.serif { font-family: 'Palatino', 'Palatino Linotype', 'Georgia', serif; }
+
+p, blockquote, ul, ol {
+    margin-bottom: 0.6em;
+}
+
+html {
+  background: $page-bg;
+}
+
+body {
+    width: 80%;
+    > div {                             // sidebar
+        background: none;
+        > div {                         // main blog post area
+            background: $main-bg;
+            border: none;
+        }
+    }
+    > header {
+        padding: 15px 0 5px 0;
+        h1 {
+          font-size: 1em;
+          float: left;
+        }
+        border-bottom: 1px solid #53565a;
+    }
+    > nav {
+        float: right;
+        background: $nav-bg;
+        border: none;
+    }
+    > footer {
+      background: $footer-bg;
+      border: none;
+      margin: 0 auto;
+      border-radius: 0;
+    }
+}
+
+nav ul {
+    text-align: right;
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul > li {
+    display: inline;
+    font-size: 0.8em;
+}
+
+nav ul > li::after {
+    content: " - ";
+}
+
+nav ul > li:last-child::after {
+    content: "";
+}
+
+article header { 
+    margin-bottom: 0.6em;
+    padding: 0;
+    p.meta {
+        position: relative;
+    }
+}
+
+#content {
+  margin: 0;
+}
+
+#content > div, #content > article {
+}
+
+#content .blog-index article {
+  padding: 27.5px 0 15px 0;
+}
+
+h1.entry-title {
+  font-size: 1.6em !important;
+  font-weight: normal;
+}
+
+body #content > article, body #content > div > article, body #content > div > section, {
+  padding: 0;
+}
