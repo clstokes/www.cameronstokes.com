@@ -1,6 +1,9 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
 
+$default-padding-mobile: 5px 0 5px 0 !important;
+$default-padding-desktop: 27.5px 0 15px 0 !important;
+
 // Fonts
 .heading {
   font-family: 'Georgia', serif;
@@ -22,14 +25,20 @@ html {
 
 body {
   width: 80%;
+  @media only screen and (max-width: 768px) {
+    width: 95%;
+  }
 }
 body > div, body > div > div {                    // main blog post area
     background: $main-bg;
     border: none;
 }
 body > header {
-    padding: 15px 0 5px 0 !important;           // !important needed for IE
-    border-bottom: 1px solid #53565a;
+  padding: $default-padding-desktop;
+  border-bottom: 1px solid #53565a;
+  @media only screen and (max-width: 768px) {
+    padding: $default-padding-mobile;
+  }
 }
 body > header > h1 {
   font-size: 1em;
@@ -109,7 +118,10 @@ article img, article video, article .flash-video {
 }
 
 #content .blog-index article {
-  padding: 27.5px 0 15px 0 !important;
+  padding: $default-padding-desktop;
+  @media only screen and (max-width: 768px) {
+    padding: $default-padding-mobile;
+  }
 }
 
 h1.entry-title {
@@ -145,4 +157,7 @@ body #content > article,
 body #content > div > article, 
 body #content > div > section {
   padding: 0 !important;              // !important needed for IE
+  @media only screen and (max-width: 768px) {
+    padding: $default-padding-mobile;
+  }
 }
