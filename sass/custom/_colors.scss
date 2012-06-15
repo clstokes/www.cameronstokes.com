@@ -20,6 +20,10 @@ $footer-bg: $nav-bg;
 $footer-color: #000;
 $footer-color-hover: $nav-color-hover;
 
+::selection {
+    background: #FFFF9E;
+}
+
 /* To use the light Solarized highlighting theme uncomment the following line */
 $solarized: light;
 
