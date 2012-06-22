@@ -16,9 +16,9 @@ Outside of work I continue to dabble in whatever latest technology has caught my
 
 Some other things to know about me:
 
-* I’m engaged to [Rhonda Griffin](https://twitter.com/#!/RhondaDonda642)
+* Married to [Rhonda Griffin](https://twitter.com/#!/RhondaDonda642)
 * I like all kinds of music, especially “hillbilly music” as Rhonda calls it
-* My latest, favorite song is [Wagon Wheel](http://www.youtube.com/watch?v=O2vJUadjdmo) by Old Crow Medicine Show (as of May 2011)
+* My latest, favorite song is [We Are Young](http://www.youtube.com/watch?v=Sv6dMFF_yts) by Fun	(as of Jun 2012)
 * I am really good at finding software bugs and even better at fixing them
 * I love to travel
 * I have a knack for ordering beers that bars have run out of
