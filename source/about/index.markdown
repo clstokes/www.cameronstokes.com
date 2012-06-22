@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "About"
-date: 2011-05-12 18:43
+date: 2012-06-22 18:43
 comments: true
 sharing: true
 footer: true
@@ -18,15 +18,13 @@ Some other things to know about me:
 
 * Married to [Rhonda Griffin](https://twitter.com/#!/RhondaDonda642)
 * I like all kinds of music, especially “hillbilly music” as Rhonda calls it
-* My latest, favorite song is [We Are Young](http://www.youtube.com/watch?v=Sv6dMFF_yts) by Fun	(as of Jun 2012)
+* My latest, favorite song is [Some Nights](http://www.youtube.com/watch?v=qQkBeOisNM0) by Fun (as of Jun 2012)
 * I am really good at finding software bugs and even better at fixing them
 * I love to travel
 * I have a knack for ordering beers that bars have run out of
-* I have 2 dogs: Blue and Violet
-* I like making decisions based on data, but trust my gut too
+* I have <ins>1 dog</ins> <del>2 dogs</del>: Violet <del>[and Blue](https://twitter.com/clstokes/status/185581016713396225)</del> 
+* I like testing theories, but also trust my gut
 * I love zombie, dystopian, post-apocalyptic stories
-* I enjoy infographics
-* I am quick to notice issues with usability and user experience
-* It bothers me when when things don’t line up straight and/or are asymmetrical
+* I am quick to notice bad usability/user experience
 
 You can find me on [Twitter](https://twitter.com/#!/clstokes) and [LinkedIn](http://www.linkedin.com/in/cameronstokes) or at [cameron@cameronstokes.com](mailto:cameron@cameronstokes.com).
