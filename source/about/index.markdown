@@ -10,9 +10,9 @@ My name is Cameron Stokes and this is my personal website. Here you’ll find my
 
 I grew up and lived in Atlanta, GA for 28 years until in April of 2011 my fiance Rhonda and I picked up, drove cross-country, and moved to Seattle. We like it in Seattle. (We liked Atlanta too…)
 
-I currently work for InterContinental Hotels Group as Applications Architect on their consumer web channel. Prior to that I worked on their business-to-business and call-center channels. My professional experience has centered around Java, but I’m a generalist, having used ASP, PHP, bash, Ruby, Python, and Groovy.
+I currently work for InterContinental Hotels Group as Applications Architect on their e-commerce channel (earning $3 billion a year in revenue). Prior to that I worked on their business-to-business and call-center channels. My professional experience has centered around Java, but I’m a generalist, having used ASP, PHP, Ruby, Python, and Groovy.
 
-Outside of work I continue to dabble in whatever latest technology has caught my attention. I brew my own beer, try to drink every unique brewery/style/beer I can get my hands on, pretend I know what I’m doing with my DSLR, play with my dogs, and generally always have music playing in the background.
+Outside of work I dabble in whatever latest technology has caught my attention. I brew my own beer, try to drink every unique brewery/style/beer I can get my hands on, pretend I know what I’m doing with my DSLR, play with my dogs, and generally always have music playing in the background.
 
 Some other things to know about me:
 
