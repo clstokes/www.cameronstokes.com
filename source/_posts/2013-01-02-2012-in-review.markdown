@@ -1,0 +1,19 @@
+---
+layout: post
+title: "2012 in Review"
+date: 2013-01-02 18:41
+comments: true
+categories: Other
+---
+My highlights of 2012:
+
+1. **In January,** I spent a week with Rhonda (my fiancé at the time) in Japan. Rhonda went to Japan for work and extended her trip a week so I could join. We visited Kyoto, Hiroshima, Nara, and Tokyo.
+1. **In March,** we lost our dog, Blue, to cancer. He went from seemingly healthy to very sick in the span of 2 weeks. He was 10 years old and my best friend.
+1. **In April,** five friends and I went to Europe for my bachelor party. We flew to Munich, rented a huge van, and drove over 1800 km, spending time in Munich, Prague, Berlin, Amsterdam, Brugge, and Brussels. Beer was certainly the theme of the trip as we visited many beer bars and breweries including [Weihenstephan](http://en.wikipedia.org/wiki/Weihenstephan_Abbey) and [Cantillon](http://en.wikipedia.org/wiki/Cantillon_Brewery).
+1. **In May,** after almost 10 years, I married Rhonda on Hilton Head Island. We had an awesome wedding with all of our closest family and friends. Planning the wedding over 2,000 miles away was difficult but it went off without a hitch. If we could have the same celebration every year, we would.
+1. **In June,** I went to [Bonnaroo Music Festival](http://en.wikipedia.org/wiki/Bonnaroo_Music_Festival) in Tennessee with friends. It was our 8th year in a row attending and the first year we rented an RV. The RV has now become a requirement for all future visits as it made the festival much easier and more comfortable.
+1. **In August,** I resigned from [InterContinental Hotels Group](http://www.ichotelsgroup.com/), my employer for over 9 years, for an opportunity at [The Weather Channel](http://www.weather.com/). It was a tough decision to leave longtime colleagues and friends, but the move has allowed me to focus on recent interests of mine such as cloud computing, PaaS, devops, and more.
+1. **In November,** Rhonda went to Shanghai for work and again we extended her trip to allow for some vacation. I met her in Shanghai and we visited Hangzhou, Tunxi, and Huangshan Mountain. The trip was especially exciting for both of us as we booked our flights on All Nippon Airways so that we could fly on the [Boeing 787 Dreamliner](http://en.wikipedia.org/wiki/Boeing_787_Dreamliner) - the plane that Rhonda has worked on at Boeing for the past 2 years. In a complete surprise, I was upgraded to business class on the flight over so I was able to truly experience the new plane in all its glory.
+1. **Also in November,** I turned 30 years old. It happened that I was in Las Vegas at the time for the [AWS re: Invent](https://reinvent.awsevents.com/) conference and Rhonda surprised me by showing up at my hotel room door at midnight, having taken the late night flight from Seattle to meet me there. A few other friends were also in town for the conference and we had a great time celebrating my birthday with all of them. After Las Vegas, I flew to Chicago to meet a few other friends for the weekend and the celebrations continued there.
+
+In between all of that, I traveled to Atlanta over 10 times and San Francisco a handful of times for work. I flew over 90,000 miles and spent over 2 months away from home. What a year...

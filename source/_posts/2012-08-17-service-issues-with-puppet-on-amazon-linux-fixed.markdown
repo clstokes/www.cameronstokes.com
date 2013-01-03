@@ -77,7 +77,7 @@ class httpd {
   service { 'httpd':
     ensure => running,
     enable => true,
-    hasstatus => true,
+    hasstatus => true,   # <--- The fix.
   }
 
 }
