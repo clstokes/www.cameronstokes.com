@@ -11,4 +11,6 @@ I opted for the [CLEAR Spot Voyager](http://www.clear.com/devices/details/id/dev
 
 I won't get into step-by-step details on how to setup a wireless bridge. This post is merely to confirm that it is possible with a CLEAR Spot Voyager and an [ASUS RT-N16](http://www.asus.com/Networks/Wireless_Routers/RTN16/) wireless router. I **_was not_** able to get the bridge setup correctly with the ASUS firmware, but I **_was_** able to get it working after flashing it to [DD-WRT](http://www.dd-wrt.com/) and following the [Client Bridge](http://www.dd-wrt.com/wiki/index.php/Client_Bridged) instructions.
 
+{% img /wp-content/uploads/2012/05/clear-spot-bridge.png 677 152 CLEAR Bridge Setup %}
+
 We now have all wireless and wired devices in the house connected through CLEAR. Look for a future post on my thoughts on CLEAR service as I evaluate it over the next week or so.
