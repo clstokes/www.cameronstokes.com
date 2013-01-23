@@ -3,7 +3,7 @@ layout: post
 title: "Beer Review: Flying Dog Wild Dog Collaborator Doppelbock"
 date: 2012-08-12 16:13
 comments: true
-categories: 
+categories: Beer
 ---
 
 __*Wild Dog Collaborator Doppelbock*__ is a Doppelbock lager by [Flying Dog Brewery](http://flyingdogales.com/) in [Frederick, Maryland](https://local.google.com/maps?q=Frederick,+Maryland+&hl=en&sll=37.0625,-95.677068&sspn=35.410182,57.919922&hnear=Frederick,+Maryland&t=m&z=12). It was brewed in the Summer of 2007 and released at the Great American Beer Festival that year. As the label states, Collaborator was an "open source beer". A beer whose recipe was created by the brewery and its fans and released to the public. How cool is that!

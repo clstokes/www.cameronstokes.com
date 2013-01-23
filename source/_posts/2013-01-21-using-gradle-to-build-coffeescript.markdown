@@ -3,7 +3,7 @@ layout: post
 title: "Using Gradle to Build CoffeeScript"
 date: 2013-01-21 16:16
 comments: true
-categories:
+categories: Tech
 ---
 Here's a simple [Gradle](http://www.gradle.org/) script for building and cleaning [CoffeeScript](http://coffeescript.org/) with two tasks: _coffee_ and _clean_.
 ```
@@ -27,5 +27,4 @@ task coffee( type: CoffeeScriptCompile ) {
   source fileTree( sourceDir )
   destinationDir file( buildDir )
 }
-
 ```

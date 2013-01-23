@@ -3,7 +3,7 @@ layout: post
 title: "Overriding Hibernate in a Grails Application"
 date: 2012-08-13 21:30
 comments: true
-categories: 
+categories: Tech
 ---
 I was working on a proof of concept application recently in which I needed to use an internal middleware library to access some backend services. As I usually do, I jumped to Grails for my POC and worked to pull in our middleware library. After struggling with many other issues unrelated to Grails, I ended up with some incompatibilities between the Hibernate version included in Grails and the Hibernate version in our library. On a whim, I removed the Grails version from the packaged application and was able to get things up and running.
 
